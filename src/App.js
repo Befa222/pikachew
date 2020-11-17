@@ -1,10 +1,12 @@
+import React from "react";
+import Test from "./component/test";
 
-import './App.css';
 
 function App() {
   return (
-    <test
-    name = "john" />
+    <Test
+     name = "john"
+     />
   );
 }
 

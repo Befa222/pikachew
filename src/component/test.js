@@ -1,6 +1,6 @@
 import React from "react";
 
-function test(props) {
+function Test (props) {
     return (
         <h1>{props.name}</h1>
     )
@@ -10,4 +10,4 @@ function test(props) {
 
 
 
-export default test;
+export default Test;
