@@ -1,0 +1,37 @@
+.hero-img{
+	width :375px;
+	margin-top: 2%;
+}
+.pikachu-home{
+	width :60%;
+	height: auto;
+	
+	align-self:center;
+
+	
+}
+.container-home{
+	display: flex;
+	flex-direction: column;
+	
+}
+.bubble{
+	border-radius : 25%;
+	height: auto;
+	width: 40%;
+}
+.poke-bubble{
+	width: 90%;
+	height: 120px;;
+	align-self:center;
+	margin-top: 4%;
+}
+.test{
+position: absolute;
+}
+.home-button{
+	margin-top: 50px;
+	width: 50%;
+	height: 50px;
+	align-self:center;
+}
