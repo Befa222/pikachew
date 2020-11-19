@@ -1,37 +1,45 @@
+@media only screen and (min-width: 280px){
+
+body{
+	background-color: rgb(23, 157, 247);
+	font-family: 'Press Start 2P', cursive;
+	
+}
 .hero-img{
-	width :375px;
+	width :100%;
 	margin-top: 2%;
 }
 .pikachu-home{
-	width :60%;
+	margin-top: 5px;
+	width :50%;
 	height: auto;
-	
 	align-self:center;
-
-	
 }
 .container-home{
 	display: flex;
 	flex-direction: column;
 	
 }
-.bubble{
-	border-radius : 25%;
-	height: auto;
-	width: 40%;
-}
 .poke-bubble{
-	width: 90%;
-	height: 120px;;
+	background-color: beige;
+	width: 80%;
+	height: 15%;
 	align-self:center;
 	margin-top: 4%;
 }
-.test{
-position: absolute;
-}
 .home-button{
-	margin-top: 50px;
-	width: 50%;
+	margin-top: 70px;
+	width: 55%;
 	height: 50px;
 	align-self:center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	
+}
+
+
+
+
+
+
 }
