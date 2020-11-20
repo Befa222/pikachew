@@ -8,7 +8,7 @@ function Home () {
           <img className="hero-img" src="https://i.blogs.es/17b4fe/pokemon-shuffle/1366_2000.jpg"/>
         </div>
         <div className="container-home">
-          <img className="pikachu-home" src="https://www.pinclipart.com/picdir/middle/35-355110_pokemon-pikachu-clipart-png.png"/>
+          <img className="pikachu-home" src="https://cdnb.artstation.com/p/assets/images/images/023/566/647/original/andy-pelaez-pikachu-animated.gif?1579627222"/>
         
           <img className="poke-bubble" src="https://www.pngkit.com/png/full/584-5843757_pokemon-dialog-box-pokemon-text-box-png.png"/>
           
