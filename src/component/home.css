@@ -1,0 +1,52 @@
+@media only screen and (min-width: 280px){
+body{
+	background-image: url("https://thumbs.gfycat.com/BountifulAcceptableHadrosaurus-max-1mb.gif");
+	background-position: center;
+	background-size: cover;
+}	
+
+.title{
+	font-family: Pokemon solid;
+	font-size: 55px;
+	text-align: center;
+	color: rgb(0, 195, 255);
+	text-shadow: -7px -3px 1px rgb(241, 241, 5), 3px 7px 1px rgb(238, 238, 4);
+	
+}
+.pikachu-home{
+	margin-top: 10px;
+	width :80%;
+	height: auto;
+	align-self:center;
+}
+.container-home{
+	display: flex;
+	flex-direction: column;
+	
+}
+.poke-bubble{
+	background-color: beige;
+	width: 80%;
+	height: 15%;
+	align-self:center;
+	margin-top: 8%;
+}
+.home-button{
+	font-family: 'Press Start 2P', cursive;
+	margin-top: 70px;
+	width: 55%;
+	height: 50px;
+	align-self:center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	margin-bottom: 100%;
+	text-shadow: 5rem solid yellow;
+	
+}
+
+
+
+
+
+
+}
