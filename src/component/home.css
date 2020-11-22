@@ -1,4 +1,4 @@
-@media only screen and (min-width: 280px){
+@media only screen and (max-width: 600px) and (min-width: 280px){
 body{
 	background-image: url("https://thumbs.gfycat.com/BountifulAcceptableHadrosaurus-max-1mb.gif");
 	background-position: center;
@@ -9,9 +9,12 @@ body{
 	font-family: Pokemon solid;
 	font-size: 55px;
 	text-align: center;
-	color: rgb(0, 195, 255);
-	text-shadow: -7px -3px 1px rgb(241, 241, 5), 3px 7px 1px rgb(238, 238, 4);
+	color: rgb(255, 203, 5);
+	text-shadow: -7px -3px 1px rgb(0, 58, 112), 3px 7px 1px rgb(61,125,202);
 	
+}
+.homePikachuDesktop {
+	display: none;
 }
 .pikachu-home{
 	margin-top: 10px;
@@ -31,6 +34,16 @@ body{
 	align-self:center;
 	margin-top: 8%;
 }
+.typerDiv {
+	background-image: url('../images/pokebubblebox.png');
+	width: 220px;
+	height: 100px;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 0.4rem;
+	margin-top: 3%;
+	padding: 8px 1rem;
+	align-self: center;
+}
 .home-button{
 	font-family: 'Press Start 2P', cursive;
 	margin-top: 70px;
@@ -41,12 +54,51 @@ body{
 	font-size: 15px;
 	margin-bottom: 100%;
 	text-shadow: 5rem solid yellow;
-	
 }
 
-
-
-
-
-
+/* Code for the mobile version goes in here, above this sentence. Do not write code below this line. */
+}
+@media only screen and (min-width: 600px){
+	.title{
+		font-family: Pokemon solid;
+		font-size: 55px;
+		text-align: center;
+		color: rgb(255, 203, 5);
+		text-shadow: -7px -3px 1px rgb(0, 58, 112), 3px 7px 1px rgb(61,125,202);
+	}
+	.pikachu-home {
+		display:none;
+	}
+	.container-home{
+		display: flex;
+		flex-direction: column;
+	}
+	.homePikachuDesktop {
+		display:flex;
+		align-self: center;
+		width:30%;
+	}
+	.poke-bubble{
+		display:none;
+	}
+	.home-button{
+		font-family: 'Press Start 2P', cursive;
+		margin-top: 70px;
+		width: 55%;
+		height: 50px;
+		align-self:center;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 15px;
+		margin-bottom: 5%;
+		text-shadow: 5rem solid yellow;
+	}
+	.typerDiv {
+		background-image: url('../images/pokebubblebox.png');
+		width: 220px;
+		height: 100px;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 0.4rem;
+		padding: 8px 1rem;
+		align-self: center;
+	}
 }
