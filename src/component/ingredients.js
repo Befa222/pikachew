@@ -35,7 +35,7 @@ class Ingredients extends Component {
                     <input type="text"></input>
                 </section>
 
-                <button className="home-button" onClick={this.props.toIngredients}>What can I cook ?</button>
+                <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
             </div>
         )
     }
