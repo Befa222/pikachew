@@ -1,0 +1,36 @@
+
+.pikachu-ingredients{
+    width: 30%;
+    background-color: beige;
+    border-radius: 100%;
+    border : solid black;
+}
+.ingredients-header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid black;
+}
+.bubble-ingredients{
+    background-color: beige;
+    margin-bottom: 10px;
+}
+.ingredients-image{
+    width: 30%;
+    background-color: beige;
+    border-radius: 100%;
+    border : solid black;
+    align-self: center;
+    margin-bottom: 15px;;
+}
+.ingredients-section{
+    display: flex;
+    flex-direction: column;
+    border-width: 50%;
+}
+figcaption{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-family:  'Press Start 2P', cursive;
+}
