@@ -26,16 +26,16 @@ class Ingredients extends Component {
                 <section className="ingredients-section">
                     <p>MEAT</p>
                     <img className="ingredients-image" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.emojiterra.com%2Fgoogle%2Fandroid-pie%2F512px%2F1f356.png" alt="meat"/>
-                  <input type="text"></input>
+                    <input type="text"></input>
                 </section>
 
                 <section className="ingredients-section">
                     <p>VEGETABLE</p>
                     <img className="ingredients-image" src="https://cdn2.iconfinder.com/data/icons/veggies-2/500/vegetable-plant-food-ingredients-22-512.png" alt="carot"/>
-                    
+                    <input type="text"></input>
                 </section>
 
-                
+                <button className="home-button" onClick={this.props.toIngredients}>What can I cook ?</button>
             </div>
         )
     }

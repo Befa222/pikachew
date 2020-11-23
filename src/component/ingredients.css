@@ -8,7 +8,7 @@
 .ingredients-header{
     display: flex;
     flex-direction: row;
-    border-bottom: solid black;
+  
 }
 .bubble-ingredients{
     background-color: beige;
