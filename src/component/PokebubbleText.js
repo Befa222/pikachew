@@ -28,7 +28,7 @@ class PokeBubbleText extends Component {
         });
 
         if (!deleting && text === fullText) {
-            let tO = setTimeout(() => this.setState({deleting: true}), 700)
+            setTimeout(() => this.setState({deleting: true}), 700)
         } else if (deleting && text === '') {
             this.setState({
                 deleting:false,
