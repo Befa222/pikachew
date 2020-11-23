@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css'
 import Home from './component/home'
 import Ingredients from './component/ingredients'
 import Result from './component/result'
@@ -68,9 +67,5 @@ class App extends Component {
     );
   }
 }
-
-
-
-
 
     export default App;
