@@ -1,4 +1,3 @@
-
 .pikachu-ingredients{
     width: 30%;
     background-color: beige;
@@ -8,12 +7,13 @@
 .ingredients-header{
     display: flex;
     flex-direction: row;
-  
-}
+    justify-content: space-around;
+    margin-top:2%;
+}/* 
 .bubble-ingredients{
     background-color: beige;
     margin-bottom: 10px;
-}
+} */
 .ingredients-image{
     width: 30%;
     background-color: beige;
@@ -33,4 +33,17 @@ figcaption{
 p{
     text-align: center;
     font-family:  'Press Start 2P', cursive;
+}
+.searchBar {
+    width: 80%;
+    height:10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-image: url("../images/searchGlass.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-origin: content-box; */
+    background-position: 2px 1px;
+    padding-left: 22px;
 }
