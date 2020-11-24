@@ -1,17 +1,16 @@
 @media only screen and (max-width: 600px) and (min-width: 280px){
 body{
-	/*background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");*/
-	/*background-position: center;*/
-	margin: 0;
-	padding: 0;
+	background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
+	background-position: center;
+	
 	
 }
-.home{
+/* .home{
 	background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
 	margin: 0;
 	padding: 0;
 	background-position: center;
-}	
+}	 */
 .title{
 	font-family: Pokemon solid;
 	font-size: 55px;
