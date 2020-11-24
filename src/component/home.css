@@ -1,4 +1,8 @@
 @media only screen and (max-width: 600px) and (min-width: 280px){
+	@font-face {
+		font-family: Pokemon Solid;
+		src: url('../fonts/Pokemon\ Solid.ttf')
+	}
 body{
 	/*background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
 	background-position: center;*/
@@ -9,7 +13,7 @@ body{
 	border:1px solid transparent;
 	background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
 	background-position: center;
-	background-size: auto;
+	background-size: contain;
 	min-height: 100vh;
 }
 .homeTitle{
@@ -17,14 +21,14 @@ body{
 	font-size: 55px;
 	text-align: center;
 	color: rgb(240, 144, 184);
-	text-shadow: -7px -3px 5px rgb(98, 98, 102), 3px 7px 5px rgb(98, 98, 114);
+	text-shadow: -7px -3px  rgb(98, 98, 102), 3px 7px  rgb(98, 98, 114);
 }
 .homePikachuDesktop {
 	display: none;
 }
 .pikachu-home{
-	margin-top: 10px;
-	margin-bottom:5%;
+	
+	margin-bottom:50px;
 	width :60%;
 	height: auto;
 	align-self:center;
@@ -42,7 +46,7 @@ body{
 } */
 .typerDiv {
 	background-image: url('../images/pokebubblebox.png');
-	background-color: #fefac8;
+	background-color:  rgb(245, 215, 248);
 	align-self: center;
 	width: 220px;
 	height: 100px;

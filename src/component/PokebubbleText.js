@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class PokeBubbleText extends Component {
     static defProps = {
-        heading: '',
+       
         textData: []
     }
 
@@ -22,7 +22,7 @@ class PokeBubbleText extends Component {
         const {deleting, loopNumber, text, typerSpeed} = this.state
         const index = loopNumber % textData.length
         const fullText = textData[index]
-
+console.log("hello")
         this.setState({
             text: deleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1), typerSpeed: deleting ? 20 : 80
         });
@@ -42,9 +42,8 @@ class PokeBubbleText extends Component {
 
     render() {
         return(
-            <div className="typerDiv">
+            <div>
                 <h1>
-                    {this.props.heading}
                     {this.state.text}
                 </h1>
             </div>

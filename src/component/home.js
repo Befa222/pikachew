@@ -9,13 +9,7 @@ class Home extends Component {
       showHome: true,
       chefpikachu: chefpika
     }
-  
-    /*showModal = () => {
-      this.setState({
-        showIngredients: true
-      })
-    }*/
-  
+    
     render() {
         return (
             this.state.showHome &&
@@ -23,18 +17,19 @@ class Home extends Component {
               <div>
                 <h1 className="homeTitle">Pick a Chew</h1>
               </div>
-            <div className="container-home">
-              <img className="pikachu-home" alt="pikachu" src="https://24.media.tumblr.com/affe17343df660b60158dcf2f5186726/tumblr_mqbi7mGN9e1sxk0yto1_400.gif"/>
+                <div className="container-home">
+                  <img className="pikachu-home" alt="pikachu" src="https://24.media.tumblr.com/affe17343df660b60158dcf2f5186726/tumblr_mqbi7mGN9e1sxk0yto1_400.gif"/>
 
-              <img className="homePikachuDesktop" alt="Chef Pikachu." src={this.state.chefpikachu}/>
+                  <img className="homePikachuDesktop" alt="Chef Pikachu." src={this.state.chefpikachu}/>
             
-              {/* <img className="poke-bubble" alt="text-area" src="https://www.pngkit.com/png/full/584-5843757_pokemon-dialog-box-pokemon-text-box-png.png"/> */}
-                <PokeBubbleText 
-                  /*heading={'Pikachu: '}*/
+                  <div className="typerDiv">
+                  <PokeBubbleText 
+                  
                   textData={["Pika-pi! Welcome to Pika-Chew!", "The quick-stop app for all your recipe needs!", "To get started, click on the button below!"]}
-                />
-              <button className="home-button" onClick={this.props.toIngredients}>What can I cook ?</button>
-            </div>
+                  />
+                  </div>
+                  <button className="home-button" onClick={this.props.toIngredients}>What can I cook ?</button>
+              </div>
           </div>
         )
     }

@@ -1,3 +1,11 @@
+.ingredients{
+    border-top:1px solid rgb(41, 177, 240);
+    background-image: url("https://cdn.statically.io/img/static.zerochan.net/Pok%C3%A9mon.full.1807947.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+    min-height: 100vh;
+}
 .pikachu-ingredients{
     width: 30%;
     background-color: beige;
@@ -9,11 +17,17 @@
     flex-direction: row;
     justify-content: space-around;
     margin-top:2%;
-}/* 
+    margin-bottom: 20px;
+} 
 .bubble-ingredients{
-    background-color: beige;
-    margin-bottom: 10px;
-} */
+        background-image: url('../images/pokebubblebox.png');
+		width: 220px;
+		height: 100px;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 0.4rem;
+		padding: 8px 1rem;
+		align-self: center;;
+}
 .ingredients-image{
     width: 30%;
     background-color: beige;
@@ -46,4 +60,17 @@ p{
     /* background-origin: content-box; */
     background-position: 2px 1px;
     padding-left: 22px;
+    margin-bottom: 50px;
+}
+.home-button{
+	font-family: 'Press Start 2P', cursive;
+    margin-top: 70px;
+    margin-bottom: 50px;;
+	width: 80%;
+	height: 50px;
+	align-self:center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	background-color: rgb(200, 248, 247);
+	border-radius:10px;
 }
