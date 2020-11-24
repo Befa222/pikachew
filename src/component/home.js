@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import "./home.css"
-import chefpika from '../images/chefpikachu.png'
-import pikachuHome from '../images/pikachuHome.png'
 import PokeBubbleText from './PokebubbleText'
+import chefpika from '../images/chefpikachu.png'
+import pikachuHome from '../images/pikachuHome.gif'
 
 class Home extends Component {
 
     state = {
       showHome: true,
-      chefpikachu: chefpika
     }
     
     render() {
@@ -19,9 +18,9 @@ class Home extends Component {
                 <h1 className="homeTitle">Pick a Chew</h1>
               </div>
                 <div className="container-home">
-                  <img className="pikachu-home" alt="pikachu" src="../images/"/>
+                  <img className="pikachu-home" alt="pikachu" src={pikachuHome}/>
 
-                  <img className="homePikachuDesktop" alt="Chef Pikachu." src={this.state.chefpikachu}/>
+                  <img className="homePikachuDesktop" alt="Chef Pikachu." src={chefpika}/>
             
                   <div className="typerDiv">
                   <PokeBubbleText 
