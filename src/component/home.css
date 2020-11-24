@@ -1,29 +1,34 @@
 @media only screen and (max-width: 600px) and (min-width: 280px){
+	@font-face {
+		font-family: Pokemon Solid;
+		src: url('../fonts/Pokemon\ Solid.ttf')
+	}
 body{
-	background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
-	background-position: center;
-	
+	/*background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
+	background-position: center;*/
+	background-color: rgb(248, 248, 196);
 	
 }
-/* .home{
+.home{
+	border:1px solid transparent;
 	background-image: url("https://media2.giphy.com/media/3o7btUDtnx3gTwIlmo/giphy.gif");
-	margin: 0;
-	padding: 0;
 	background-position: center;
-}	 */
-.title{
+	background-size: contain;
+	min-height: 100vh;
+}
+.homeTitle{
 	font-family: Pokemon solid;
 	font-size: 55px;
 	text-align: center;
 	color: rgb(240, 144, 184);
-	text-shadow: -7px -3px 5px rgb(98, 98, 102), 3px 7px 5px rgb(98, 98, 114);
-	
+	text-shadow: -7px -3px  rgb(98, 98, 102), 3px 7px  rgb(98, 98, 114);
 }
 .homePikachuDesktop {
 	display: none;
 }
 .pikachu-home{
-	margin-top: 10px;
+	
+	margin-bottom:50px;
 	width :60%;
 	height: auto;
 	align-self:center;
@@ -31,36 +36,36 @@ body{
 .container-home{
 	display: flex;
 	flex-direction: column;
-	
-	
 }
-.poke-bubble{
-	background-color: rgb(245, 245, 217);
+/* .poke-bubble{
+	background-color: #fefac8;
 	width: 67%;
 	height: 10%;
 	align-self:center;
 	margin-top: 8%;
-}
+} */
 .typerDiv {
 	background-image: url('../images/pokebubblebox.png');
+	background-color:  rgb(245, 215, 248);
+	align-self: center;
 	width: 220px;
 	height: 100px;
 	font-family: 'Press Start 2P', cursive;
 	font-size: 0.4rem;
-	margin-top: 0%;
+	margin-top: 0;
 	padding: 8px 1rem;
-	align-self: center;
+	
 }
 .home-button{
 	font-family: 'Press Start 2P', cursive;
 	margin-top: 70px;
-	width: 100%;
+	width: 80%;
 	height: 50px;
 	align-self:center;
 	font-family: 'Press Start 2P', cursive;
 	font-size: 15px;
 	background-color: rgb(200, 248, 247);
-	
+	border-radius:10px;
 }
 
 /* Code for the mobile version goes in here, above this sentence. Do not write code below this line. */
