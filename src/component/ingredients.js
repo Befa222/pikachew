@@ -36,8 +36,9 @@ class Ingredients extends Component {
                 <section className="ingredients-section">
                     <p>MEAT</p>
                     <img className="ingredients-image" src={meat} alt="meat"/>
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
                     <SearchBar />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
@@ -82,9 +83,7 @@ class Ingredients extends Component {
                     <input className="searchBar" type="text"></input>
                 </section>
 
-                <div className="basic-multi-select">
-                <Select />
-                </div>
+                
                 <div className="container-home">
                 <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                 </div>

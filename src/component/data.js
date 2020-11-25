@@ -2,14 +2,18 @@ import React from 'react';
 import Select from 'react-select'
 
 const options = [
-    {value: 'chocolate', label: 'Chocolate'},
-    {value: 'strawberry', label: 'Strawberry'},
-    {value: 'vanilla', label: 'Vanilla'}
+    {value: 'beef', label: 'Beef'},
+    {value: 'chicken', label: 'Chicken'},
+    {value: 'lamb', label: 'Lamb'}
 ]
 
 const SearchBar = () => (
     <Select
-        options={options}
+    isMulti
+    name="colors"
+    options={options}
+    className="basic-multi-select"
+    classNamePrefix="select"
     />
 )
 

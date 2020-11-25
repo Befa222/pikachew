@@ -74,3 +74,16 @@ p{
 	background-color: rgb(200, 248, 247);
 	border-radius:10px;
 }
+.basic-multi-select{
+   width: 95%;
+   align-self: flex-end;
+   font-family: 'Press Start 2P', cursive;
+   font-size: 13px;
+   border-radius: 20px;
+   
+}
+.css-yk16xz-control{
+    border-radius: 20px !important;
+    border : solid black !important;
+    margin-bottom: 30px !important;
+}
