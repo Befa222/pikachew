@@ -17,6 +17,7 @@ body{
 	min-height: 100vh;
 }
 .homeTitle{
+	-webkit-text-stroke: 1px rgb(57, 225, 255);
 	font-family: Pokemon solid;
 	font-size: 55px;
 	text-align: center;
