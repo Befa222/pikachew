@@ -79,7 +79,7 @@ class Ingredients extends Component {
                     <img className="ingredients-image" src={sauce} alt="sauce"/>
                     <input className="searchBar" type="text"></input>
                 </section>
-
+          
                 <div className="container-home">
                 <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                 </div>
