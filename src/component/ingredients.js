@@ -26,7 +26,8 @@ class Ingredients extends Component {
                     <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu"/>
                         <div className="bubble-ingredients">
                             <PokeBubbleText 
-                            textData={["Pika-pi! It's time to check what food you have at home", "Select the ingredients in the lists below!"]}
+                            stopCounter={212}
+                            textData={["Pika-pi! It's time to check what food you have at home", "Select the ingredients in each category! Don't worry they will pop as you start typing!"]}
                             />
                         </div>
                 </div>

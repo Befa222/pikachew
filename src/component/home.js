@@ -24,7 +24,7 @@ class Home extends Component {
             
                   <div className="typerDiv">
                   <PokeBubbleText 
-                  
+                   stopCounter={221}
                   textData={["Pika-pi! Welcome to Pika-Chew!", "The quick-stop app for all your recipe needs!", "To get started, click on the button below!"]}
                   />
                   </div>
