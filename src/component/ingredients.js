@@ -10,7 +10,7 @@ import dairy from '../images/dairyIcon.png'
 import grain from '../images/grainIcon.png'
 import herb  from '../images/herb&spiceIcon.png'
 import sauce  from '../images/sauceIcons.png'
-import Select from 'react-select'
+import SearchBar from './data';
 
 
 class Ingredients extends Component {
@@ -37,6 +37,7 @@ class Ingredients extends Component {
                     <p>MEAT</p>
                     <img className="ingredients-image" src={meat} alt="meat"/>
                     <input className="searchBar" type="text"></input>
+                    <SearchBar />
                 </section>
 
                 <section className="ingredients-section">
