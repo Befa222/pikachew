@@ -10,6 +10,7 @@ import dairy from '../images/dairyIcon.png'
 import grain from '../images/grainIcon.png'
 import herb  from '../images/herb&spiceIcon.png'
 import sauce  from '../images/sauceIcons.png'
+import Select from 'react-select'
 
 
 class Ingredients extends Component {
@@ -80,6 +81,9 @@ class Ingredients extends Component {
                     <input className="searchBar" type="text"></input>
                 </section>
 
+                <div className="basic-multi-select">
+                <Select />
+                </div>
                 <div className="container-home">
                 <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                 </div>
