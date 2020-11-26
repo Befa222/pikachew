@@ -74,3 +74,47 @@ p{
 	background-color: rgb(200, 248, 247);
 	border-radius:10px;
 }
+.basic-multi-select{    /*react select properties*/
+   width: 95%;
+   align-self: flex-end;
+   font-family: 'Nerko One', cursive;
+   font-size: 18px;
+}
+.css-yk16xz-control{        /* react select properties*/
+    border-radius: 20px !important;
+    border : solid black!important;
+    margin-bottom: 30px !important;
+    
+    
+    
+    
+}
+.css-1pahdxg-control{           /* react select properties*/
+    border-radius: 20px !important;
+    border : solid black !important;
+    
+}
+.css-1rhbuit-multiValue{            /* react select properties*/
+    border-radius: 20px !important;   
+}
+
+
+
+
+
+/*select{               search bar from scratch
+    width: 90%;
+    height: 37px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 5%;
+    appearance: none;
+    background-image: url("../images/searchGlass.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 7px 5px;
+    padding-left: 45px;
+    font-size: 15px;
+    margin-bottom: 50px;
+    
+}*/

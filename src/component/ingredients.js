@@ -3,14 +3,15 @@ import PokeBubbleText from './PokebubbleText'
 import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import meat from '../images/meatIcon.png'
-import fish from '../images/fishIcon.png'
+import fish from '../images/fish-icon2.png'
 import vege from '../images/vegetablesIcon.png'
 import fruit from '../images/fruitsIcon.png'
 import dairy from '../images/dairyIcon.png'
 import grain from '../images/grainIcon.png'
 import herb  from '../images/herb&spiceIcon.png'
 import sauce  from '../images/sauceIcons.png'
-import SearchBar from './data';
+import SearchBar from './searchBar'
+
 
 
 class Ingredients extends Component {
@@ -27,8 +28,8 @@ class Ingredients extends Component {
                     <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu"/>
                         <div className="bubble-ingredients">
                             <PokeBubbleText 
-                            stopCounter={212}
-                            textData={["Pika-pi! It's time to check what food you have at home", "Select the ingredients in each category! Don't worry they will pop as you start typing!"]}
+                            stopCounter={175}
+                            textData={["Pika-pi! It's time to check what ingredients you have at home!", "Select them in each category below!"]}
                             />
                         </div>
                 </div>
@@ -36,14 +37,19 @@ class Ingredients extends Component {
                 <section className="ingredients-section">
                     <p>MEAT</p>
                     <img className="ingredients-image" src={meat} alt="meat"/>
-                    <input className="searchBar" type="text"></input>
-                    <SearchBar />
+                    <div className="basic-multi-select">
+                     <SearchBar
+                      />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
                     <p>FISH</p>
                     <img className="ingredients-image" src={fish} alt="fish"/>
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                     <SearchBar
+                      />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
@@ -81,7 +87,8 @@ class Ingredients extends Component {
                     <img className="ingredients-image" src={sauce} alt="sauce"/>
                     <input className="searchBar" type="text"></input>
                 </section>
-          
+
+                
                 <div className="container-home">
                 <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                 </div>
