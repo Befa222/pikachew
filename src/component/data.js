@@ -9,7 +9,12 @@ const options = [
 
 const SearchBar = () => (
     <Select
-        options={options}
+    defaultValue={[options[2], options[3]]}     
+    isMulti     
+    name="colors"     
+    options={options}     
+    className="basic-multi-select"     
+    classNamePrefix="select"
     />
 )
 
