@@ -21,7 +21,7 @@ body{
 	font-size: 55px;
 	text-align: center;
 	color: rgb(240, 144, 184);
-	text-shadow: -7px -3px  rgb(98, 98, 102), 3px 7px  rgb(98, 98, 114);
+	text-shadow: -7px -3px rgb(98, 98, 102), 3px 7px rgb(114, 105, 98);
 }
 .homePikachuDesktop {
 	display: none;

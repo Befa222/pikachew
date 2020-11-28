@@ -4,6 +4,7 @@ import PokeBubbleText from './PokebubbleText'
 import chefpika from '../images/chefpikachu.png'
 import pikachuHome from '../images/pikachuHome.gif'
 
+
 class Home extends Component {
 
     state = {
@@ -11,6 +12,10 @@ class Home extends Component {
     }
     
     render() {
+
+     
+
+
         return (
             this.state.showHome &&
             <div className="home" >
@@ -28,7 +33,9 @@ class Home extends Component {
                   textData={["Pika-pi! Welcome to Pika-Chew!", "The quick-stop app for all your recipe needs!", "To get started, click on the button below!"]}
                   />
                   </div>
-                  <button className="home-button" onClick={this.props.toIngredients}>Let's start!</button>
+
+                  <button className="home-button" onClick={this.props.toIngredients}>Let's start</button>
+                  
               </div>
           </div>
         )
