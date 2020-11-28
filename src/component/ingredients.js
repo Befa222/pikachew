@@ -10,7 +10,7 @@ import dairy from '../images/dairyIcon.png'
 import grain from '../images/grainIcon.png'
 import herb from '../images/herb&spiceIcon.png'
 import sauce from '../images/sauceIcons.png'
-import SearchBar from './SearchBar'
+import SearchBar from './searchBar'
 
 let magGlassTarget, i;
 
@@ -22,6 +22,7 @@ class Ingredients extends Component {
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
 
+    removeBar = () => document.querySelector(".css-1okebmr-indicatorSeparator").remove()
 
     searchBarGlass = () => {
         magGlassTarget = document.querySelectorAll(".css-tlfecz-indicatorContainer");
@@ -35,6 +36,7 @@ class Ingredients extends Component {
         this.removeArrow()
         this.removeArrow()
         this.searchBarGlass()
+        this.removeBar()
     }
 
 
@@ -73,13 +75,18 @@ class Ingredients extends Component {
                 <section className="ingredients-section">
                     <p>VEGETABLES</p>
                     <img className="ingredients-image" src={vege} alt="carot" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar
+                        />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
                     <p>FRUITS</p>
                     <img className="ingredients-image" src={fruit} alt="fruit" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
