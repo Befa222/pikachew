@@ -54,7 +54,6 @@ p{
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    background-image: url("../images/searchGlass.png");
     background-repeat: no-repeat;
     background-size: contain;
     /* background-origin: content-box; */
@@ -78,29 +77,23 @@ p{
    width: 95%;
    align-self: flex-end;
    font-family: 'Nerko One', cursive;
-   font-size: 18px;
+   font-size: 20px;
 }
 .css-yk16xz-control{        /* react select properties*/
     border-radius: 20px !important;
     border : solid black!important;
     margin-bottom: 30px !important;
-    
-    
-    
-    
+
 }
+
 .css-1pahdxg-control{           /* react select properties*/
     border-radius: 20px !important;
     border : solid black !important;
-    
 }
+
 .css-1rhbuit-multiValue{            /* react select properties*/
     border-radius: 20px !important;   
 }
-
-
-
-
 
 /*select{               search bar from scratch
     width: 90%;
