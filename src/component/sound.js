@@ -1,23 +1,19 @@
 import React from 'react'
-import useSound from 'use-sound';
-import pokeSound from '../audio/healing.mp3';
+import useSound from 'use-sound'
+import Healing from '../audio/healingCut2.mp3'
 
 
 
 
-
-function Healing() {
-  const [play] = useSound(pokeSound)
-  return (
-    <div>
-      <button onClick={play}></button>
-    </div>
-  )
+function Sound() {
+    const [play] = useSound(Healing)
+    return (
+        <div>
+            <span className="home-button" onClick=
+          {play}>Let's start!
+</span>
+        </div>
+    )
 }
 
-
-
-
-
- 
-export default Healing;
+  export default Sound;

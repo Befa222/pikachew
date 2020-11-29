@@ -12,6 +12,7 @@ import herb from '../images/herb&spiceIcon.png'
 import sauce from '../images/sauceIcons.png'
 import SearchBar from './searchBar'
 
+
 let magGlassTarget, i;
 
 class Ingredients extends Component {
@@ -35,12 +36,25 @@ class Ingredients extends Component {
         this.removeArrow()
         this.removeArrow()
         this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
         this.searchBarGlass()
+
+     
         
+        
+    
     }
 
 
     render() {
+
+
+
+
+        
         return (
             this.state.showIngredients &&
             <div className="ingredients">
@@ -92,25 +106,33 @@ class Ingredients extends Component {
                 <section className="ingredients-section">
                     <p>DAIRY</p>
                     <img className="ingredients-image" src={dairy} alt="cheese" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
                     <p>GRAINS && BAKING</p>
                     <img className="ingredients-image" src={grain} alt="pot" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
                     <p>HERBS & SPICES</p>
                     <img className="ingredients-image" src={herb} alt="pot" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar />
+                    </div>
                 </section>
 
                 <section className="ingredients-section">
                     <p>SAUCES</p>
                     <img className="ingredients-image" src={sauce} alt="sauce" />
-                    <input className="searchBar" type="text"></input>
+                    <div className="basic-multi-select">
+                        <SearchBar />
+                    </div>
                 </section>
 
 
