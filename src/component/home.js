@@ -5,16 +5,17 @@ import chefpika from '../images/chefpikachu.png'
 import pikachuHome from '../images/pikachuHome.gif'
 
 
+
 class Home extends Component {
 
     state = {
       showHome: true,
     }
-    
+
+
     render() {
 
-     
-
+    
 
         return (
             this.state.showHome &&

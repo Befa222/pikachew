@@ -22,8 +22,6 @@ class Ingredients extends Component {
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
 
-    removeBar = () => document.querySelector(".css-1okebmr-indicatorSeparator").remove()
-
     searchBarGlass = () => {
         magGlassTarget = document.querySelectorAll(".css-tlfecz-indicatorContainer");
         for (i = 0; i < magGlassTarget.length; i++) {
@@ -35,8 +33,10 @@ class Ingredients extends Component {
     componentDidMount() {
         this.removeArrow()
         this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
         this.searchBarGlass()
-        this.removeBar()
+        
     }
 
 
