@@ -3,6 +3,7 @@ import "./home.css"
 import PokeBubbleText from './PokebubbleText'
 import chefpika from '../images/chefpikachu.png'
 import pikachuHome from '../images/pikachuHome.gif'
+import Sound from './sound'
 
 
 class Home extends Component {
@@ -33,8 +34,9 @@ class Home extends Component {
                   textData={["Pika-pi! Welcome to Pika-Chew!", "The quick-stop app for all your recipe needs!", "To get started, click on the button below!"]}
                   />
                   </div>
-
-                  <button className="home-button" onClick={this.props.toIngredients}>Let's start</button>
+                  
+                  <button className="home-button" onClick={this.props.toIngredients}><Sound/></button>
+                  
                   
               </div>
           </div>

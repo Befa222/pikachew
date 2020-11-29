@@ -12,6 +12,7 @@ import herb from '../images/herb&spiceIcon.png'
 import sauce from '../images/sauceIcons.png'
 import SearchBar from './searchBar'
 
+
 let magGlassTarget, i;
 
 class Ingredients extends Component {
@@ -22,7 +23,6 @@ class Ingredients extends Component {
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
 
-    removeBar = () => document.querySelector(".css-1okebmr-indicatorSeparator").remove()
 
     searchBarGlass = () => {
         magGlassTarget = document.querySelectorAll(".css-tlfecz-indicatorContainer");
@@ -34,9 +34,16 @@ class Ingredients extends Component {
     }
     componentDidMount() {
         this.removeArrow()
-      
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
+        this.removeArrow()
         this.searchBarGlass()
-        this.removeBar()
+
+     
         
         
     
@@ -44,6 +51,11 @@ class Ingredients extends Component {
 
 
     render() {
+
+
+
+
+        
         return (
             this.state.showIngredients &&
             <div className="ingredients">
