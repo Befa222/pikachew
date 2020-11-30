@@ -1,6 +1,6 @@
 import React from 'react'
 import useSound from 'use-sound'
-import Healing from '../audio/healingCut2.mp3'
+import Healing from '../audio/pika.mp3'
 
 
 
