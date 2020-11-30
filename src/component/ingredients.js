@@ -33,13 +33,7 @@ class Ingredients extends Component {
     }
     componentDidMount() {
         this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
-        this.removeArrow()
+       
         this.searchBarGlass()
 
      
@@ -81,8 +75,7 @@ class Ingredients extends Component {
                     <p>FISH</p>
                     <img className="ingredients-image" src={fish} alt="fish" />
                     <div className="basic-multi-select">
-                        <SearchBar
-                        />
+                        
                     </div>
                 </section>
 
@@ -90,8 +83,7 @@ class Ingredients extends Component {
                     <p>VEGETABLES</p>
                     <img className="ingredients-image" src={vege} alt="carot" />
                     <div className="basic-multi-select">
-                        <SearchBar
-                        />
+                       
                     </div>
                 </section>
 
@@ -99,7 +91,7 @@ class Ingredients extends Component {
                     <p>FRUITS</p>
                     <img className="ingredients-image" src={fruit} alt="fruit" />
                     <div className="basic-multi-select">
-                        <SearchBar />
+                       
                     </div>
                 </section>
 
@@ -107,7 +99,7 @@ class Ingredients extends Component {
                     <p>DAIRY</p>
                     <img className="ingredients-image" src={dairy} alt="cheese" />
                     <div className="basic-multi-select">
-                        <SearchBar />
+                        
                     </div>
                 </section>
 
@@ -115,7 +107,7 @@ class Ingredients extends Component {
                     <p>GRAINS && BAKING</p>
                     <img className="ingredients-image" src={grain} alt="pot" />
                     <div className="basic-multi-select">
-                        <SearchBar />
+                       
                     </div>
                 </section>
 
@@ -123,7 +115,7 @@ class Ingredients extends Component {
                     <p>HERBS & SPICES</p>
                     <img className="ingredients-image" src={herb} alt="pot" />
                     <div className="basic-multi-select">
-                        <SearchBar />
+                        
                     </div>
                 </section>
 
@@ -131,7 +123,7 @@ class Ingredients extends Component {
                     <p>SAUCES</p>
                     <img className="ingredients-image" src={sauce} alt="sauce" />
                     <div className="basic-multi-select">
-                        <SearchBar />
+                       
                     </div>
                 </section>
 
