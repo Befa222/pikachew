@@ -1,0 +1,8 @@
+.results{
+    border-top:1px solid rgb(160, 41, 240);
+    background-image:url('https://images.hdqwalls.com/download/anime-sunset-scene-b8-640x1136.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+    min-height: 100vh;
+}

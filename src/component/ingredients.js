@@ -6,6 +6,7 @@ import SearchBar from './searchBar'
 import {fridge} from './fridge'
 
 
+
 let magGlassTarget, i;
 
 class Ingredients extends Component {
@@ -35,9 +36,10 @@ class Ingredients extends Component {
         this.removeArrow()
         this.searchBarGlass()
     }
-
+    
 
     render() {
+        
 
         return (
             this.state.showIngredients &&
@@ -51,6 +53,8 @@ class Ingredients extends Component {
                         />
                     </div>
                 </div>
+
+            <form>
 
                 <section className="ingredients-section">
                         {
@@ -72,81 +76,11 @@ class Ingredients extends Component {
                     <div className="container-home">
                         <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                     </div>
+            </form>
             </div>
         )
     }
 }
-
-
-
-
-
-                    {/* <p>MEAT</p>
-                    <img className="ingredients-image" src={meat} alt="meat" />
-                    <div className="basic-multi-select">
-                        <SearchBar
-                        />
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>FISH</p>
-                    <img className="ingredients-image" src={fish} alt="fish" />
-                    <div className="basic-multi-select">
-                        <SearchBar />
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>VEGETABLES</p>
-                    <img className="ingredients-image" src={vege} alt="carot" />
-                    <div className="basic-multi-select">
-                        
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>FRUITS</p>
-                    <img className="ingredients-image" src={fruit} alt="fruit" />
-                    <div className="basic-multi-select">
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>DAIRY</p>
-                    <img className="ingredients-image" src={dairy} alt="cheese" />
-                    <div className="basic-multi-select">
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>GRAINS && BAKING</p>
-                    <img className="ingredients-image" src={grain} alt="pot" />
-                    <div className="basic-multi-select">
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>HERBS & SPICES</p>
-                    <img className="ingredients-image" src={herb} alt="pot" />
-                    <div className="basic-multi-select">
-                        
-                    </div>
-                </section>
-
-                <section className="ingredients-section">
-                    <p>SAUCES</p>
-                    <img className="ingredients-image" src={sauce} alt="sauce" />
-                    <div className="basic-multi-select">
-                        
-                    </div>
-                </section>
- */}
                
 
 export default Ingredients;
