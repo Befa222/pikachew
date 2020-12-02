@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Select from 'react-select'
 
 
-const apiUrl = 'https://api.spoonacular.com/food/ingredients/search?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc';
+/*const apiUrl = 'https://api.spoonacular.com/food/ingredients/search?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc';*/
 class SearchBar extends Component {
     /*state = {
         data: {}
@@ -18,6 +18,10 @@ class SearchBar extends Component {
                 })
             })
     }*/
+
+    
+
+
     render() {
         return (
             <Select

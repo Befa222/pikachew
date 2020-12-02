@@ -1,0 +1,30 @@
+.results{
+    border-top:1px solid rgb(160, 41, 240);
+    background-image:url('https://images.hdqwalls.com/download/anime-sunset-scene-b8-640x1136.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+    min-height: 100vh;
+}
+.pikachu-results{
+    width: 30%;
+    background-color: beige;
+    border-radius: 100%;
+    border : solid black;
+}
+.results-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:2%;
+    margin-bottom: 20px;
+} 
+.bubble-results{
+    background-image: url('../images/pokebubblebox.png');
+    width: 220px;
+    height: 100px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.4rem;
+    padding: 8px 1rem;
+    align-self: center;
+}
