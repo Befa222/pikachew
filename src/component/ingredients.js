@@ -74,7 +74,7 @@ class Ingredients extends Component {
 
                 </section>
                     <div className="container-home">
-                        <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
+                        <button type="submit" className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                     </div>
             </form>
             </div>

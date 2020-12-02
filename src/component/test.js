@@ -24,7 +24,7 @@ constructor(props){
 
 
 componentDidMount() {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=71b0a410e528408b9c88a08d281b4d6f&ingredients=${INGREDIENT_LIST}`)                       
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=71b0a410e528408b9c88a08d281b4d6f&ingredients=${INGREDIENT_LIST}&number=2`)                       
     .then(res => res.json())
     .then(json => {
       this.setState({
