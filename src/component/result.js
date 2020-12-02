@@ -4,6 +4,10 @@ import Test from './test'
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import PokeBubbleText from './PokebubbleText'
 
+import essai from './ingredients'
+
+
+
 
 class Result extends Component {
 

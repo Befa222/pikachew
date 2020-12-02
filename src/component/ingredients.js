@@ -12,7 +12,9 @@ let magGlassTarget, i;
 class Ingredients extends Component {
 
     state = {
-        showIngredients: true
+        showIngredients: true,
+        toDo: '',
+    listOfToDos: []
     }
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
