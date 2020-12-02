@@ -4,6 +4,10 @@ import React, {Component} from 'react';
 const INGREDIENT_LIST = ['chicken', 'mushrooms','beef'];
 
 
+
+
+ /*const api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=2`*/
+
 class Test extends Component {
 
 constructor(props){
@@ -24,7 +28,8 @@ constructor(props){
 
 
 componentDidMount() {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=71b0a410e528408b9c88a08d281b4d6f&ingredients=${INGREDIENT_LIST}&number=2`)                       
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=2`
+    )                       
     .then(res => res.json())
     .then(json => {
       this.setState({
