@@ -4,6 +4,9 @@ import Ingredients from './component/ingredients'
 import Result from './component/result'
 
 
+
+console.log(process.env.REACT_APP_SPOON_API_KEY)
+
 class App extends Component {
     state ={
         showHome : true,
