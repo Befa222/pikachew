@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-
-
-const INGREDIENT_LIST = ['chicken', 'mushrooms','beef'];
-
+import {stock} from './stockIngredients'
 
 
 
- /*const api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=2`*/
+let stock2 = stock.join()
+
+
+
+ /*const api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=10`*/
 
 class Test extends Component {
 
@@ -14,7 +15,8 @@ constructor(props){
   super(props);
   this.state = {
     items:{},
-    isLoaded: false
+    isLoaded: false,
+    
   }
 }
 
@@ -27,7 +29,7 @@ constructor(props){
 
 
 componentDidMount() {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=2`
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=5`
     )                       
     .then(res => res.json())
     .then(json => {
@@ -41,6 +43,8 @@ componentDidMount() {
   }
 
 render() {
+
+    
 
     let {isLoaded, items} = this.state;
 
