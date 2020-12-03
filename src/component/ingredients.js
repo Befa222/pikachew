@@ -4,6 +4,10 @@ import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import {fridge} from './fridge'
+import {stock} from './stockIngredients'
+
+
+
 
 
 
@@ -11,10 +15,20 @@ let magGlassTarget, i;
 
 class Ingredients extends Component {
 
+    
     state = {
         showIngredients: true,
-        toDo: '',
-    listOfToDos: []
+        ingredientsMeat: [],
+        ingredientsFish: [],
+        ingredientsVegetables: [],
+        ingredientsFruits: [],
+        ingredientsDairy: [],
+        ingredientsGrains: [],
+        ingredientsHerbs: [],
+        ingredientsSauces: [],
+        finalIngredients: []
+
+        
     }
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
@@ -39,11 +53,39 @@ class Ingredients extends Component {
         this.searchBarGlass()
     }
     
+    handleIngredientsChange = (option, category) => { 
+        let optionToString = option
+            ? option.map(ingredientsOption => ingredientsOption.value)
+            : []
+        this.setState({
+          ['ingredients' + category]: optionToString
+        })
+      }
+     getAllIngredients = () => { 
+       let allIngredients = [
+           ...this.state.ingredientsMeat,
+           ...this.state.ingredientsFish,
+           ...this.state.ingredientsVegetables,
+           ...this.state.ingredientsFruits,
+           ...this.state.ingredientsDairy,
+           ...this.state.ingredientsGrains,
+           ...this.state.ingredientsHerbs,
+           ...this.state.ingredientsSauces,
+         ]
+         this.setState({
+           finalIngredients: stock.push(allIngredients)
+        
+         })
+       }
+  
 
     render() {
-        
+    console.log(stock)
 
         return (
+
+
+
             this.state.showIngredients &&
             <div className="ingredients">
                 <div className="ingredients-header">
@@ -56,7 +98,7 @@ class Ingredients extends Component {
                     </div>
                 </div>
 
-            <form>
+            
 
                 <section className="ingredients-section">
                         {
@@ -67,7 +109,8 @@ class Ingredients extends Component {
                                     <div className="basic-multi-select">
                                     <SearchBar 
                                     list={fridgeChoice.ingredients}
-                                    
+                                    handleIngredientsChange={this.handleIngredientsChange}
+                                    category={fridgeChoice.category}
                                     />
                                     </div>
                                 </>
@@ -75,10 +118,15 @@ class Ingredients extends Component {
                         }
 
                 </section>
+
+                      
+            <button onClick={this.getAllIngredients}>test</button>
+              
+
                     <div className="container-home">
-                        <button type="submit" className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
+                        <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
                     </div>
-            </form>
+                       
             </div>
         )
     }

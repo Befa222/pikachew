@@ -35,7 +35,8 @@ class App extends Component {
         this.setState({
           showHome: false,
           showIngredients: false,
-          showResult: true
+          showResult: true,
+          
         })
       }
       render() {
