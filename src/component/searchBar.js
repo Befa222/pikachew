@@ -19,7 +19,8 @@ class SearchBar extends Component {
             })
     }*/
 
-    
+    handleChange = option => this.props.handleIngredientsChange(option, this.props.category)
+ 
 
 
     render() {
@@ -29,7 +30,7 @@ class SearchBar extends Component {
                 options={this.props.list}
                 className="basic-multi-select"
                 classNamePrefix="select"
-                
+                onChange={this.handleChange}
             />
         )
     }

@@ -3,6 +3,10 @@ import './result.css'
 import Test from './test'
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import PokeBubbleText from './PokebubbleText'
+import {stock} from './stockIngredients'
+
+
+
 
 
 class Result extends Component {
@@ -13,6 +17,7 @@ class Result extends Component {
       }
      
     render() {
+        console.log(stock)
         return (
             this.state.showResult &&
             <div className="results">
