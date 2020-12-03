@@ -80,6 +80,9 @@ class Ingredients extends Component {
        }
   
 
+
+
+
     render() {
     console.log(stock)
 
@@ -121,11 +124,11 @@ class Ingredients extends Component {
                 </section>
 
                       
-            <button onClick={this.getAllIngredients}>test</button>
+             
               
 
                     <div className="container-home">
-                        <button className="home-button" onClick={this.props.toResults}>What can I cook ?</button>
+                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}>What can i cook?</button></button>
                     </div>
                        
             </div>
