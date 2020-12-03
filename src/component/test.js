@@ -3,7 +3,6 @@ import {stock} from './stockIngredients'
 
 
 
-let stock2 = stock.join()
 
 
 
@@ -30,7 +29,8 @@ constructor(props){
 
 
 componentDidMount() {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=5`
+  let stock2= stock.join()
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=15`
     )                       
     .then(res => res.json())
     .then(json => {

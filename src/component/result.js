@@ -7,7 +7,7 @@ import {stock} from './stockIngredients'
 
 
 
-
+let stock2 = stock.join()
 
 class Result extends Component {
 
@@ -17,7 +17,7 @@ class Result extends Component {
       }
      
     render() {
-        console.log(stock)
+        console.log(stock2)
         return (
             this.state.showResult &&
             <div className="results">
@@ -30,7 +30,9 @@ class Result extends Component {
                         />
                     </div>
                 </div>
-                <Test />
+                <Test
+            superStock={stock2}
+                />
                 <div className="container-home">
                     <button className="home-button" onClick={this.props.toIngredients}>I forgot some ingredients</button>
                 </div>
