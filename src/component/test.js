@@ -30,7 +30,7 @@ constructor(props){
 
 
 componentDidMount() {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=5`
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=4`
     )                       
     .then(res => res.json())
     .then(json => {
