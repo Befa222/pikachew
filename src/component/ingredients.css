@@ -111,3 +111,11 @@ p{
     margin-bottom: 50px;
     
 }*/
+.cheat{
+    border:none;
+    background-color:  rgb(200, 248, 247);
+    width : 99.9%;
+    height: 45px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+}
