@@ -5,6 +5,7 @@ import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import {fridge} from './fridge'
 import {stock} from './stockIngredients'
+import Sound2 from './sound2'
 
 
 
@@ -127,7 +128,7 @@ class Ingredients extends Component {
               
 
                     <div className="container-home">
-                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}>What can i cook?</button></button>
+                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}><Sound2 /></button></button>
                     </div>
                        
             </div>
