@@ -31,7 +31,7 @@ constructor(props){
 
 componentDidMount() {
   let stock2= stock.join()
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=2`
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=10`
     )                       
     .then(res => res.json())
     .then(json => {

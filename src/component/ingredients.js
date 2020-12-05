@@ -100,7 +100,7 @@ class Ingredients extends Component {
                     <div className="bubble-ingredients">
                         <PokeBubbleText
                             stopCounter={140}
-                            textData={["Pika-pi! It's time to raid your fridge!", "Select each ingredient in the categories below!"]}
+                            textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
                 </div>
@@ -125,11 +125,7 @@ class Ingredients extends Component {
                         }
 
                 </section>
-
                 
-             
-              
-
                     <div className="container-home">
                     <button className="home-button" onClick={this.props.toLoading}>
                         <button className="cheat" onClick={this.getAllIngredients}>
