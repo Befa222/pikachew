@@ -1,0 +1,15 @@
+.loading{
+    background-color: black;
+    border-top:1px solid black;
+    background-image: url('../images/runningPika.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 100vh;
+}
+.title{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}

@@ -12,6 +12,9 @@ import Sound2 from './sound2'
 
 
 
+
+
+
 let magGlassTarget, i;
 
 class Ingredients extends Component {
@@ -123,12 +126,16 @@ class Ingredients extends Component {
 
                 </section>
 
-                      
+                
              
               
 
                     <div className="container-home">
-                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}><Sound2 /></button></button>
+                    <button className="home-button" onClick={this.props.toLoading}>
+                        <button className="cheat" onClick={this.getAllIngredients}>
+                            <Sound2 />
+                            </button>
+                            </button>
                     </div>
                        
             </div>

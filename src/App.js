@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './component/home'
 import Ingredients from './component/ingredients'
 import Result from './component/result'
+import Loading from './component/loading'
 
 
 
@@ -12,6 +13,7 @@ class App extends Component {
         showHome : true,
         showIngredients: false,
         showResult: false,
+        showLoading : false
 
     }
 
@@ -19,7 +21,8 @@ class App extends Component {
         this.setState({
           showHome: true,
           showIngredients: false,
-          showResult: false
+          showResult: false,
+          showLoading : false
         })
       }
 
@@ -27,7 +30,8 @@ class App extends Component {
         this.setState({
           showHome: false,
           showIngredients: true,
-          showResult: false
+          showResult: false,
+          showLoading : false
         })
       }
     
@@ -36,9 +40,25 @@ class App extends Component {
           showHome: false,
           showIngredients: false,
           showResult: true,
+          showLoading : false
           
         })
       }
+
+       showLoadingSection = () => {
+         this.setState({
+          showHome: false,
+           showIngredients: false,
+           showResult: false,
+           showLoading: true
+          
+         })
+       }
+
+
+
+
+
       render() {
         
         return (
@@ -55,6 +75,7 @@ class App extends Component {
           this.state.showIngredients &&
           <div className="ingredients">
             <Ingredients
+            toLoading={this.showLoadingSection}
             toResults={this.showResultSection}
               />
             </div>
@@ -67,6 +88,14 @@ class App extends Component {
               />
             </div>
         }
+         {
+          this.state.showLoading &&
+          <div className="Loading">
+            <Loading
+            toIngredients={this.showIngredientsSection}
+              />
+            </div>
+        } 
       </div>
     );
   }
