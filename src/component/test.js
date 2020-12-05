@@ -6,6 +6,7 @@ import {stock} from './stockIngredients'
 
 
 
+
  /*const api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=10`*/
 
 class Test extends Component {
@@ -29,7 +30,7 @@ constructor(props){
 
 componentDidMount() {
   let stock2= stock.join()
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=15`
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=10`
     )                       
     .then(res => res.json())
     .then(json => {
@@ -49,7 +50,7 @@ render() {
     let {isLoaded, items} = this.state;
 
     if (!isLoaded) {
-      return <div>Loading.......</div>;
+      return <div>Almost there...</div>;
     }
     
       else {

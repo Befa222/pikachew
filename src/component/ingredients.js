@@ -5,6 +5,10 @@ import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import {fridge} from './fridge'
 import {stock} from './stockIngredients'
+import Sound2 from './sound2'
+
+
+
 
 
 
@@ -96,7 +100,7 @@ class Ingredients extends Component {
                     <div className="bubble-ingredients">
                         <PokeBubbleText
                             stopCounter={140}
-                            textData={["Pika-pi! It's time to raid your fridge!", "Select each ingredient in the categories below!"]}
+                            textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
                 </div>
@@ -121,13 +125,13 @@ class Ingredients extends Component {
                         }
 
                 </section>
-
-                      
-             
-              
-
+                
                     <div className="container-home">
-                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}>What can i cook?</button></button>
+                    <button className="home-button" onClick={this.props.toLoading}>
+                        <button className="cheat" onClick={this.getAllIngredients}>
+                            <Sound2 />
+                            </button>
+                            </button>
                     </div>
                        
             </div>
