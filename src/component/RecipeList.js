@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { stock } from './stockIngredients';
 import './RecipeList.css';
 
-/*const api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${INGREDIENT_LIST}&number=10`*/
+
 
 class RecipeList extends Component {
   constructor(props) {
@@ -13,9 +13,9 @@ class RecipeList extends Component {
     }
   }
 
-  /*https://api.spoonacular.com/food/ingredients/search?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc*/
+  
   /*https://api.spoonacular.com/recipes/complexSearch?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc*/
-  /*https://api.spoonacular.com/recipes/findByIngredients?apiKey=71b0a410e528408b9c88a08d281b4d6f&ingredients=apples,+flour,+sugar&number=2*/
+  
 
   componentDidMount() {
     let stock2 = stock.join()

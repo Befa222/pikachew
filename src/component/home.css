@@ -36,13 +36,6 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-/* .poke-bubble{
-	background-color: #fefac8;
-	width: 67%;
-	height: 10%;
-	align-self:center;
-	margin-top: 8%;
-} */
 .typerDiv {
 	background-image: url('../images/pokebubblebox.png');
 	background-color:  rgb(245, 215, 248);
