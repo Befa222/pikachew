@@ -23,10 +23,12 @@ class Result extends Component {
                         />
                     </div>
                 </div>
+                <>
                 <RecipeList
                 />
+                </>
                 <div className="container-home">
-                    <button className="home-button" onClick={this.props.toIngre}>I forgot some ingredients</button>
+                    <button className="result-button" onClick={this.props.toIngre}>I forgot some ingredients</button>
                 </div>
             </div>
         )

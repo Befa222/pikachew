@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { stock } from './stockIngredients';
 import './RecipeList.css';
-
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 class RecipeList extends Component {
@@ -19,7 +20,7 @@ class RecipeList extends Component {
 
   componentDidMount() {
     let stock2 = stock.join()
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=10`)
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=14`)
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -36,16 +37,22 @@ class RecipeList extends Component {
     }
     else {
       return (
+
         <div className="recipeListContainer">
-          <ul>
+         
+         <Carousel >
             {items.map(item => (
-              <li key={item.id}>
-                <h1>{item.title}</h1>
+               
+                 <div key={item.id}> 
+                <p className="legend">{item.title}</p>
                 <img src={item.image} alt="images"/>
-              </li>
+                </div>
+                
+              
             ))
             }
-          </ul>
+          </Carousel>
+        
         </div>
       );
     }

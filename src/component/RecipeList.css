@@ -1,23 +1,54 @@
-.recipeListContainer {
-    border: 2px solid #FBF5C6;
+/* .recipeListContainer {
+    background-color: white;
+    border: 2px solid black;
     border-radius: 10px;
     height: 55vh;
     width: 90vw;
     margin: 0 auto;
     overflow-x: auto;
-}
+} */
+/*
 .recipeListContainer ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin:0;
     padding:0;
     height: inherit;
     width: inherit;
 }
 .recipeListContainer ul li {
+    margin-top: 10%;
+    margin-bottom: 12%;
     list-style-type: none;
-    padding: 1rem 1rem;
-    margin: 1rem;
     font-size: 90%;
     text-align: center;
+} */
+.carousel .thumbs-wrapper{
+    display: none !important;
+}
+.legend{
+    font-family: 'Nerko One', cursive;
+    font-size: 13px !important;
+    color: black !important;
+    margin-bottom: 0;
+    background-color: beige !important;
+    border: 1px solid black;
+    padding: 4px !important;
+    
+
+}
+.carousel .carousel-status{
+    display: none !important;
+}
+.carousel .slide .legend{
+    opacity: 1 !important;
+}
+.carousel.carousel-slider{
+    border: 2px solid black;
+    width: 99% !important;
+    margin-top: 50px !important;
+    
+}
+.carousel-root{
+    padding: 2%;
 }
