@@ -94,23 +94,6 @@ p{
 .css-1rhbuit-multiValue{            /* react select properties*/
     border-radius: 20px !important;   
 }
-
-/*select{               search bar from scratch
-    width: 90%;
-    height: 37px;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin-left: 5%;
-    appearance: none;
-    background-image: url("../images/searchGlass.png");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 7px 5px;
-    padding-left: 45px;
-    font-size: 15px;
-    margin-bottom: 50px;
-    
-}*/
 .cheat{
     border:none;
     background-color:  rgb(200, 248, 247);
