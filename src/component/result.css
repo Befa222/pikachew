@@ -28,3 +28,14 @@
     padding: 8px 1rem;
     align-self: center;
 }
+.result-button{
+    font-family: 'Press Start 2P', cursive;
+	margin-top: 140px;
+	width: 80%;
+	height: 50px;
+	align-self:center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	background-color: rgb(200, 248, 247);
+	border-radius:10px;
+}
