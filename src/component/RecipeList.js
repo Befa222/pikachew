@@ -41,7 +41,7 @@ class RecipeList extends Component {
             {items.map(item => (
               <li key={item.id}>
                 <h1>{item.title}</h1>
-                <img src={item.image}/>
+                <img src={item.image} alt="images"/>
               </li>
             ))
             }
