@@ -5,17 +5,11 @@ import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import {fridge} from './fridge'
 import {stock} from './stockIngredients'
-
-
-
-
-
+import Sound2 from './sound2'
 
 let magGlassTarget, i;
 
 class Ingredients extends Component {
-
-    
     state = {
         showIngredients: true,
         ingredientsMeat: [],
@@ -27,8 +21,6 @@ class Ingredients extends Component {
         ingredientsHerbs: [],
         ingredientsSauces: [],
         finalIngredients: []
-
-        
     }
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
@@ -75,21 +67,12 @@ class Ingredients extends Component {
          ]
          this.setState({
            finalIngredients: stock.push(allIngredients)
-        
          })
        }
   
 
-
-
-
     render() {
-    console.log(stock)
-
         return (
-
-
-
             this.state.showIngredients &&
             <div className="ingredients">
                 <div className="ingredients-header">
@@ -97,12 +80,10 @@ class Ingredients extends Component {
                     <div className="bubble-ingredients">
                         <PokeBubbleText
                             stopCounter={140}
-                            textData={["Pika-pi! It's time to raid your fridge!", "Select each ingredient in the categories below!"]}
+                            textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
                 </div>
-
-            
 
                 <section className="ingredients-section">
                         {
@@ -122,13 +103,13 @@ class Ingredients extends Component {
                         }
 
                 </section>
-
-                      
-             
-              
-
+                
                     <div className="container-home">
-                    <button className="home-button" onClick={this.props.toResults}><button className="cheat" onClick={this.getAllIngredients}>What can i cook?</button></button>
+                    <button className="home-button" onClick={this.props.toLoading}>
+                        <button className="cheat" onClick={this.getAllIngredients}>
+                            <Sound2 />
+                            </button>
+                            </button>
                     </div>
                        
             </div>

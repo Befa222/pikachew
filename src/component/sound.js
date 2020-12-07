@@ -1,12 +1,12 @@
 import React from 'react'
 import useSound from 'use-sound'
-import Healing from '../audio/pika.mp3'
+import Pika from '../audio/pika.mp3'
 
 
 
 
 function Sound() {
-    const [play] = useSound(Healing)
+    const [play] = useSound(Pika)
     return (
         <div>
             <span className="home-button" onClick=

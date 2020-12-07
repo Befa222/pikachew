@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
 import Home from './component/home'
 import Ingredients from './component/ingredients'
-import Result from './component/result'
-
-
-
-console.log(process.env.REACT_APP_SPOON_API_KEY)
+import Loading from './component/loading'
 
 class App extends Component {
-    state ={
+    state={
         showHome : true,
-        showIngredients: false,
-        showResult: false,
-
+        showIngredients: false,/* 
+        showResult: false, */
+        showLoading : false
     }
 
     showHomeSection = () => {
         this.setState({
           showHome: true,
           showIngredients: false,
-          showResult: false
+          showResult: false,
+          showLoading : false
         })
       }
 
@@ -27,20 +24,32 @@ class App extends Component {
         this.setState({
           showHome: false,
           showIngredients: true,
-          showResult: false
+          showResult: false,
+          showLoading : false
         })
       }
     
-      showResultSection = () => {
-        this.setState({
-          showHome: false,
-          showIngredients: false,
-          showResult: true,
+      // showResultSection = () => {
+      //   this.setState({
+      //     showHome: false,
+      //     showIngredients: false,
+      //     showResult: true,
+      //     showLoading : false
           
-        })
-      }
+      //   })
+      // }
+
+       showLoadingSection = () => {
+         this.setState({
+          showHome: false,
+           showIngredients: false,
+           showResult: false,
+           showLoading: true
+          
+         })
+       }
+
       render() {
-        
         return (
          <div>
         {
@@ -55,21 +64,28 @@ class App extends Component {
           this.state.showIngredients &&
           <div className="ingredients">
             <Ingredients
-            toResults={this.showResultSection}
+            toLoading={this.showLoadingSection}
               />
             </div>
         }
-        {
+        {/* {
           this.state.showResult &&
           <div className="ingredients">
             <Result
             toIngredients={this.showIngredientsSection}
               />
             </div>
-        }
+        } */}
+         {
+          this.state.showLoading &&
+          <div className="Loading">
+            <Loading
+            toIngredients={this.showIngredientsSection}
+              />
+            </div>
+        } 
       </div>
     );
   }
 }
-
     export default App;
