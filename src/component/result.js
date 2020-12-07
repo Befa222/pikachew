@@ -8,15 +8,11 @@ import { stock } from './stockIngredients'
 let stock2 = stock.join()
 
 class Result extends Component {
-
-    state = {
-        showResult: true,
-    }
-
+    
     render() {
         console.log(stock2)
         return (
-            this.state.showResult &&
+           
             <div className="results">
                 <div className="results-header">
                     <img className="pikachu-results" src={pikachuIngredients} alt="pikachu" />

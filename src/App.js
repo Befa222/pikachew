@@ -6,8 +6,7 @@ import Loading from './component/loading'
 class App extends Component {
     state={
         showHome : true,
-        showIngredients: false,/* 
-        showResult: false, */
+        showIngredients: false,
         showLoading : false
     }
 
@@ -15,7 +14,6 @@ class App extends Component {
         this.setState({
           showHome: true,
           showIngredients: false,
-          showResult: false,
           showLoading : false
         })
       }
@@ -24,26 +22,13 @@ class App extends Component {
         this.setState({
           showHome: false,
           showIngredients: true,
-          showResult: false,
           showLoading : false
         })
       }
-    
-      // showResultSection = () => {
-      //   this.setState({
-      //     showHome: false,
-      //     showIngredients: false,
-      //     showResult: true,
-      //     showLoading : false
-          
-      //   })
-      // }
-
        showLoadingSection = () => {
          this.setState({
           showHome: false,
            showIngredients: false,
-           showResult: false,
            showLoading: true
           
          })
@@ -68,14 +53,6 @@ class App extends Component {
               />
             </div>
         }
-        {/* {
-          this.state.showResult &&
-          <div className="ingredients">
-            <Result
-            toIngredients={this.showIngredientsSection}
-              />
-            </div>
-        } */}
          {
           this.state.showLoading &&
           <div className="Loading">
