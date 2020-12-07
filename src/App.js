@@ -3,17 +3,12 @@ import Home from './component/home'
 import Ingredients from './component/ingredients'
 import Loading from './component/loading'
 
-
-
-console.log(process.env.REACT_APP_SPOON_API_KEY)
-
 class App extends Component {
-    state ={
+    state={
         showHome : true,
-        showIngredients: false,
-        showResult: false,
+        showIngredients: false,/* 
+        showResult: false, */
         showLoading : false
-
     }
 
     showHomeSection = () => {
@@ -54,12 +49,7 @@ class App extends Component {
          })
        }
 
-
-
-
-
       render() {
-        
         return (
          <div>
         {
@@ -98,5 +88,4 @@ class App extends Component {
     );
   }
 }
-
     export default App;

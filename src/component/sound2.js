@@ -9,11 +9,13 @@ function Sound2() {
     const [play] = useSound(Healing)
     return (
         <div>
-            <span className="home-button" onClick=
-          {play}>What can I cook?
-</span>
+            <span
+                className="home-button"
+                onClick={play}>
+                What can I cook?
+            </span>
         </div>
     )
 }
 
-  export default Sound2;
+export default Sound2;

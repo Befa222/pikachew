@@ -7,19 +7,9 @@ import {fridge} from './fridge'
 import {stock} from './stockIngredients'
 import Sound2 from './sound2'
 
-
-
-
-
-
-
-
-
 let magGlassTarget, i;
 
 class Ingredients extends Component {
-
-    
     state = {
         showIngredients: true,
         ingredientsMeat: [],
@@ -31,8 +21,6 @@ class Ingredients extends Component {
         ingredientsHerbs: [],
         ingredientsSauces: [],
         finalIngredients: []
-
-        
     }
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
@@ -78,21 +66,12 @@ class Ingredients extends Component {
          ]
          this.setState({
            finalIngredients: stock.push(allIngredients)
-        
          })
        }
   
 
-
-
-
     render() {
-    console.log(stock)
-
         return (
-
-
-
             this.state.showIngredients &&
             <div className="ingredients">
                 <div className="ingredients-header">
@@ -104,8 +83,6 @@ class Ingredients extends Component {
                         />
                     </div>
                 </div>
-
-            
 
                 <section className="ingredients-section">
                         {
