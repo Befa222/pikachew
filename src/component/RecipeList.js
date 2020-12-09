@@ -18,16 +18,19 @@ class RecipeList extends Component {
   }
 
   displayRecipeBox = (id) => {
-    // this.setState({
-    //   showRecipe: true,
-    //   chosenRecipe: id
-    // })
+    console.log('this is the', id)
     fetch(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}`)
-      .then(result => result.json())
+      .then(result => {
+        console.log('this is the', result)
+        return result.json()
+      })
       .then(jason => {
+        let recipeInfo = jason.length ? jason[0].steps : []
+        let recipeIngredients = recipeInfo.map(item => item.ingredients)
+        console.log(recipeIngredients.flat().map(ingredient => ingredient.name))
         this.setState({
           showRecipe: true,
-          info: jason[0].steps
+          info: recipeInfo
         })
       })
   }
@@ -42,7 +45,7 @@ class RecipeList extends Component {
 
   componentDidMount() {
     let stock2 = stock.join()
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=2`)
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=14`)
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -71,13 +74,19 @@ class RecipeList extends Component {
           {
             this.state.showRecipe &&
             <div className="recipeStepsBox">
-              {this.state.info.map(indexer => (
-                <div>
-                  Step {indexer.number}
-                  <p className="stepStyle">{indexer.step}</p>
-                </div>
-              ))}
-              <button onClick={this.closeRecipeBox}>Back to Recipes</button>
+              <h3>Step-by-Step Instructions</h3>
+              {this.state.info.length ?
+                this.state.info.map(indexer => (
+                  <div>
+                    Step {indexer.number}
+                    <p className="stepStyle">{indexer.step}</p>
+                  </div>
+                ))
+                : <div>
+                  <h2>Sorry, recipe not available.</h2>
+                  </div>
+              }
+              <button id="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
             </div>
           }
           {console.log(this.state.info)}
