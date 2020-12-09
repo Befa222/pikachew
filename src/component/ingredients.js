@@ -4,7 +4,7 @@ import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import {fridge} from './fridge'
-import {stock} from './stockIngredients'
+import {stock} from './stockIngredients' 
 import Sound2 from './sound2'
 
 let magGlassTarget, i;
@@ -46,7 +46,7 @@ class Ingredients extends Component {
         this.searchBarGlass()
     }
     
-    handleIngredientsChange = (option, category) => { 
+    handleIngredientsChange = (option, category) => {
         let optionToString = option
             ? option.map(ingredientsOption => ingredientsOption.value)
             : []
@@ -54,6 +54,7 @@ class Ingredients extends Component {
           ['ingredients' + category]: optionToString
         })
       }
+      
      getAllIngredients = () => { 
        let allIngredients = [
            ...this.state.ingredientsMeat,
