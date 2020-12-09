@@ -1,41 +1,22 @@
-/* .recipeListContainer {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    height: 55vh;
-    width: 90vw;
-    margin: 0 auto;
-    overflow-x: auto;
-} */
-/*
-.recipeListContainer ul {
-    display: flex;
-    flex-direction: row;
-    margin:0;
-    padding:0;
-    height: inherit;
-    width: inherit;
-}
-.recipeListContainer ul li {
-    margin-top: 10%;
-    margin-bottom: 12%;
-    list-style-type: none;
-    font-size: 90%;
-    text-align: center;
-} */
+
 .carousel .thumbs-wrapper{
     display: none !important;
 }
 .legend{
     font-family: 'Nerko One', cursive;
-    font-size: 13px !important;
+    font-size: 22px !important;
     color: black !important;
     margin-bottom: 0;
     background-color: beige !important;
     border: 1px solid black;
-    padding: 4px !important;
-    
-
+    padding: 2px !important;
+}
+.recipeContainer {
+    background-color:#F5D7F8;
+}
+.recipeImg {
+    object-fit: contain;
+    padding: 45px 28px 85px 28px;
 }
 .carousel .carousel-status{
     display: none !important;
@@ -44,11 +25,40 @@
     opacity: 1 !important;
 }
 .carousel.carousel-slider{
-    border: 2px solid black;
-    width: 99% !important;
-    margin-top: 50px !important;
-    
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100% !important;
+    margin-top: 30px !important;
 }
 .carousel-root{
-    padding: 2%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid black !important;
+}
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid black !important;
+}
+.carousel .control-dots .dot {
+    margin-bottom: 5px !important;
+}
+.recipeStepsBox {
+    border:2px solid red;
+    position: fixed;
+    z-index: 1;
+    top: 13%;
+    left: 10%;
+    width: 80%;
+    height: 600px;
+    background-color: bisque;
+    box-shadow: 50px 50px 280px 80px rgba(0,0,0,0.4);
+    text-align: center;
+    overflow-x: auto;
+    font-family: 'Nerko One', cursive;
+    font-size: 1rem;
+}
+.stepStyle {
+    font-family: 'Nerko One', cursive;
+    font-size: 1.5rem;
 }
