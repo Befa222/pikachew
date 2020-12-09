@@ -44,21 +44,30 @@
     margin-bottom: 5px !important;
 }
 .recipeStepsBox {
-    border:2px solid red;
+    border:2px solid black;
+    border-radius: 20px;
     position: fixed;
     z-index: 1;
     top: 13%;
-    left: 10%;
-    width: 80%;
+    left: 7.5%;
+    width: 85%;
     height: 600px;
     background-color: bisque;
     box-shadow: 50px 50px 280px 80px rgba(0,0,0,0.4);
     text-align: center;
     overflow-x: auto;
     font-family: 'Nerko One', cursive;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 .stepStyle {
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
+    margin-top: 10px;
+}
+#recipeButton {
+    width: 9em;
+    height: 2.5em;
+    border-radius: 30px;
+    font-size: 1.1rem;
 }
