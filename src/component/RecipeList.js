@@ -14,7 +14,8 @@ class RecipeList extends Component {
       isLoaded: false,
       showRecipe: false,
       info: [],
-      ingre:[]
+      ingre: []
+
     }
   }
 
@@ -35,24 +36,23 @@ class RecipeList extends Component {
         })
       })
   }
+
   displayRecipeBox2 = (id, ingredients) => {
     console.log("this is ingredient", ingredients)
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}`)
-    .then(result2 => {
-      console.log("this is result2" ,result2)
-      return result2.json()
-    })
-  .then(jason2 => {
-    let listIngredients = jason2.extendedIngredients
-    console.log("this is the list of ingre" , listIngredients)
-    this.setState({
-      showIngredients: true,
-      ingre: listIngredients
-    })
-  })
-  
+      .then(result2 => {
+        console.log("this is result2", result2)
+        return result2.json()
+      })
+      .then(jason2 => {
+        let listIngredients = jason2.extendedIngredients
+        console.log("this is the list of ingre", listIngredients)
+        this.setState({
+          showIngredients: true,
+          ingre: listIngredients
+        })
+      })
   }
-
 
   closeRecipeBox = () => {
     this.setState({
@@ -81,48 +81,53 @@ class RecipeList extends Component {
     }
     else {
       return (
+
         <div className="recipeListContainer">
           <Carousel >
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>
-                <p className="legend"><span onClick={() => this.displayRecipeBox2(item.id)}><span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></span></p>
                 <img src={item.image} className="recipeImg" alt="images" />
+                <button className="ingredientsButton" onClick={() => this.displayRecipeBox2(item.id)}><p className="legend">
+                  <span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></p></button>
               </div>
             ))}
           </Carousel>
-          
+
           {
             this.state.showRecipe &&
             <div className="recipeStepsBox">
-               {
-              this.state.showIngredients &&
-              <div className="ingredientsAmount">
-                {this.state.ingre.map(indexer2 => 
-                  <div>
-                    <p><strong className="ingredTitle">{indexer2.metaInformation}</strong></p>
-                    {indexer2.original}
-                  </div>
-                    )}
-             
-              </div>
-              
+              {
+                this.state.showIngredients &&
+                <div className="ingredientsAmount">
+                  <h3 className="steps">Ingredients</h3>
+                  {this.state.ingre.map(indexer2 =>
+                    <div className="ingredStepsList">
+                        <p className="ingredTitle">{indexer2.metaInformation}</p>
+                        <ul>
+                        <li>{indexer2.original}</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               }
-              <h3>Step-by-Step Instructions</h3>
+
+              <h3 className="steps">Step-by-Step Instructions</h3>
               {this.state.info.length ?
                 this.state.info.map(indexer => (
                   <div>
-                    Step {indexer.number}
+                  <h3 className="stepInstruction">  Step {indexer.number} </h3>
                     <p className="stepStyle">{indexer.step}</p>
+                    
                   </div>
                 ))
                 : <div>
                   <h2>Sorry, recipe not available.</h2>
-                  </div>
+                </div>
               }
-             
               <button id="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
             </div>
           }
+
           {console.log(this.state.info)}
         </div>
       );

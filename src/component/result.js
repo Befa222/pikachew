@@ -4,9 +4,6 @@ import RecipeList from './RecipeList'
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import PokeBubbleText from './PokebubbleText'
 
-
-
-
 class Result extends Component {
 
     render() {

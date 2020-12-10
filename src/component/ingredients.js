@@ -3,8 +3,8 @@ import PokeBubbleText from './PokebubbleText'
 import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
-import {fridge} from './fridge'
-import {stock} from './stockIngredients' 
+import { fridge } from './fridge'
+import { stock } from './stockIngredients'
 import Sound2 from './sound2'
 
 let magGlassTarget, i;
@@ -42,79 +42,77 @@ class Ingredients extends Component {
         this.removeArrow()
         this.removeArrow()
         this.removeArrow()
-       
+
         this.searchBarGlass()
     }
-    
+
     handleIngredientsChange = (option, category) => {
         let optionToString = option
             ? option.map(ingredientsOption => ingredientsOption.value)
             : []
         this.setState({
-          ['ingredients' + category]: optionToString
+            ['ingredients' + category]: optionToString
         })
-      }
-      
-     getAllIngredients = () => { 
-       let allIngredients = [
-           ...this.state.ingredientsMeat,
-           ...this.state.ingredientsFish,
-           ...this.state.ingredientsVegetables,
-           ...this.state.ingredientsFruits,
-           ...this.state.ingredientsDairy,
-           ...this.state.ingredientsGrains,
-           ...this.state.ingredientsHerbs,
-           ...this.state.ingredientsSauces,
-         ]
-         this.setState({
-           finalIngredients: stock.push(allIngredients)
-         })
-       }
-  
+    }
+
+    getAllIngredients = () => {
+        let allIngredients = [
+            ...this.state.ingredientsMeat,
+            ...this.state.ingredientsFish,
+            ...this.state.ingredientsVegetables,
+            ...this.state.ingredientsFruits,
+            ...this.state.ingredientsDairy,
+            ...this.state.ingredientsGrains,
+            ...this.state.ingredientsHerbs,
+            ...this.state.ingredientsSauces,
+        ]
+        this.setState({
+            finalIngredients: stock.push(allIngredients)
+        })
+    }
+
 
     render() {
         return (
-
             this.state.showIngredients &&
-
             <div className="ingredients">
                 <div className="ingredients-header">
                     <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu" />
                     <div className="bubble-ingredients">
                         <PokeBubbleText
-                        stopCounter={140}
-                        textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
+                            stopCounter={140}
+                            textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
                 </div>
-                    <section className="ingredients-section">
-                        {
-                            fridge.list.map(fridgeChoice=>(
-                                <>
-                                    <p>{fridgeChoice.category}</p>
-                                    <img className="ingredients-image" src={fridgeChoice.image} alt={fridgeChoice.category} />
-                                    <div className="basic-multi-select">
-                                    <SearchBar 
-                                    list={fridgeChoice.ingredients}
-                                    handleIngredientsChange={this.handleIngredientsChange}
-                                    category={fridgeChoice.category}
+                <section className="ingredients-section">
+                    {
+                        fridge.list.map(fridgeChoice => (
+                            <>
+                                <p>{fridgeChoice.category}</p>
+                                <img className="ingredients-image" src={fridgeChoice.image} alt={fridgeChoice.category} />
+                                <div className="basic-multi-select">
+                                    <SearchBar
+                                        list={fridgeChoice.ingredients}
+                                        handleIngredientsChange={this.handleIngredientsChange}
+                                        category={fridgeChoice.category}
                                     />
-                                    </div>
-                                </>
-                            ))
-                        }
-                    </section>
-                        <div className="container-home">
-                            <button className="home-button" onClick={this.props.toLoading}>
-                                <button className="cheat" onClick={this.getAllIngredients}>
-                                <Sound2 />
-                                </button>
-                            </button>
-                        </div>      
+                                </div>
+                            </>
+                        ))
+                    }
+                </section>
+                <div className="container-home">
+                    <button className="home-button" onClick={this.props.toLoading}>
+                        <button className="cheat" onClick={this.getAllIngredients}>
+                            <Sound2 />
+                        </button>
+                    </button>
+                </div>
             </div>
         )
     }
 }
-               
+
 
 export default Ingredients;
