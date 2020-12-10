@@ -3,9 +3,6 @@ import Result from './result'
 import PokeBubbleText from './PokebubbleText'
 import './loading.css'
 
-
-
-
 class Loading extends Component {
 
     constructor() {
