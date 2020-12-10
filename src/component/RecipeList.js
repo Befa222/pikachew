@@ -15,7 +15,6 @@ class RecipeList extends Component {
       showRecipe: false,
       info: [],
       ingre:[]
-
     }
   }
 
@@ -86,7 +85,7 @@ class RecipeList extends Component {
           <Carousel >
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>
-                <p className="legend"><button onClick={() => this.displayRecipeBox2(item.id)}><span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></button></p>
+                <p className="legend"><span onClick={() => this.displayRecipeBox2(item.id)}><span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></span></p>
                 <img src={item.image} className="recipeImg" alt="images" />
               </div>
             ))}
@@ -100,9 +99,8 @@ class RecipeList extends Component {
               <div className="ingredientsAmount">
                 {this.state.ingre.map(indexer2 => 
                   <div>
-                    {indexer2.original}
                     <p><strong className="ingredTitle">{indexer2.metaInformation}</strong></p>
-
+                    {indexer2.original}
                   </div>
                     )}
              
