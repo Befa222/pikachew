@@ -87,7 +87,8 @@ class RecipeList extends Component {
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>
                 <img src={item.image} className="recipeImg" alt="images" />
-                <button className="ingredientsButton" onClick={() => this.displayRecipeBox2(item.id)}><p className="legend"><span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></p></button>
+                <button className="ingredientsButton" onClick={() => this.displayRecipeBox2(item.id)}><p className="legend">
+                  <span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></p></button>
               </div>
             ))}
           </Carousel>
@@ -98,6 +99,7 @@ class RecipeList extends Component {
               {
                 this.state.showIngredients &&
                 <div className="ingredientsAmount">
+                  <h3 className="steps">Ingredients</h3>
                   {this.state.ingre.map(indexer2 =>
                     <div className="ingredStepsList">
                         <p className="ingredTitle">{indexer2.metaInformation}</p>
@@ -109,12 +111,13 @@ class RecipeList extends Component {
                 </div>
               }
 
-              <h3>Step-by-Step Instructions</h3>
+              <h3 className="steps">Step-by-Step Instructions</h3>
               {this.state.info.length ?
                 this.state.info.map(indexer => (
                   <div>
-                    Step {indexer.number}
+                  <h3 className="stepInstruction">  Step {indexer.number} </h3>
                     <p className="stepStyle">{indexer.step}</p>
+                    
                   </div>
                 ))
                 : <div>

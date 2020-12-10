@@ -71,7 +71,8 @@ p{
 	font-family: 'Press Start 2P', cursive;
 	font-size: 15px;
 	background-color: rgb(200, 248, 247);
-	border-radius:10px;
+    border-radius:10px;
+  
 }
 .basic-multi-select{    /*react select properties*/
    width: 95%;

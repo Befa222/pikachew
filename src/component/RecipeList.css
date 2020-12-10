@@ -65,7 +65,7 @@
     text-align: center;
     overflow-x: auto;
     font-family: 'Nerko One', cursive;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding-bottom: 1rem;
     color: white;
     -webkit-text-stroke: 1px white;
@@ -73,9 +73,9 @@
 }
 .stepStyle {
     font-family: 'Nerko One', cursive;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-top: 10px;
-    color: brown;
+    color: orange;
     -webkit-text-stroke: 1px honeydew;
 }
 #recipeButton {
@@ -110,12 +110,21 @@
     text-transform: capitalize;
     color: white;
     -webkit-text-stroke: 1px rgb(232, 82, 82);
+    font-size: 28px;
 }
 .ingredStepsList {
     margin-bottom: 0;
     padding-top: 0;
 }
 .ingredientsButton{
-    border : none;
-    background-color: beige;
+    border: none;
+    background-color:#F5D7F8 ;
+}
+
+.stepInstruction{
+    color: red;
+}
+
+.steps{
+    color: black;
 }
