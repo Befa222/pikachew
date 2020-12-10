@@ -83,6 +83,7 @@
     height: 2.5em;
     border-radius: 30px;
     font-size: 1.1rem;
+    background-color: black;
 }
 .ingredientsAmount{
     font-family: 'Nerko One', cursive;
