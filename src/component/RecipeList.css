@@ -3,6 +3,7 @@
     display: none !important;
 }
 .legend{
+
     font-family: 'Nerko One', cursive;
     font-size: 22px !important;
     color: black !important;
@@ -11,24 +12,25 @@
     border: 1px solid black;
     padding: 2px !important;
 }
-.recipeContainer {
-    background-color:#F5D7F8;
+ .recipeContainer {
+    background-color:#f8eed7;
 }
-.recipeImg {
+/* .recipeImg {
     object-fit: contain;
     padding: 45px 28px 85px 28px;
-}
+} */
 .carousel .carousel-status{
     display: none !important;
 }
 .carousel .slide .legend{
     opacity: 1 !important;
+    
 }
 .carousel.carousel-slider{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     width: 100% !important;
-    margin-top: 30px !important;
+    margin-top: 60px !important;
 }
 .carousel-root{
     padding-left: 0;
@@ -108,8 +110,8 @@
     font-family: 'Nerko One', cursive;
     margin-top: 1rem;
     text-transform: capitalize;
-    color: white;
-    -webkit-text-stroke: 1px rgb(232, 82, 82);
+    color: red;
+    -webkit-text-stroke: 1px white;
     font-size: 28px;
 }
 .ingredStepsList {
@@ -117,8 +119,10 @@
     padding-top: 0;
 }
 .ingredientsButton{
-    border: none;
-    background-color:#F5D7F8 ;
+    border : none;
+    width: 80%;
+    background-color:beige ;
+    font-size: 17px;
 }
 
 .stepInstruction{
@@ -127,4 +131,8 @@
 
 .steps{
     color: black;
+}
+.span1{
+    font-family: 'Nerko One', cursive;
+    font-style: 30px;
 }
