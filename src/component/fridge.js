@@ -7,7 +7,6 @@ import grain from '../images/grainIcon.png'
 import herb from '../images/herb&spiceIcon.png'
 import sauce from '../images/sauceIcons.png'
 
-
 export let fridge = {
   list: [
     {
