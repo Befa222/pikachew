@@ -13,7 +13,9 @@ class RecipeList extends Component {
       items: {},
       isLoaded: false,
       showRecipe: false,
-      info: []
+      info: [],
+      ingre:[]
+
     }
   }
 
@@ -34,6 +36,24 @@ class RecipeList extends Component {
         })
       })
   }
+  displayRecipeBox2 = (id, ingredients) => {
+    console.log("this is ingredient", ingredients)
+    fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}`)
+    .then(result2 => {
+      console.log("this is result2" ,result2)
+      return result2.json()
+    })
+  .then(jason2 => {
+    let listIngredients = jason2.extendedIngredients
+    console.log("this is the list of ingre" , listIngredients)
+    this.setState({
+      showIngredients: true,
+      ingre: listIngredients
+    })
+  })
+  
+  }
+
 
   closeRecipeBox = () => {
     this.setState({
@@ -66,14 +86,29 @@ class RecipeList extends Component {
           <Carousel >
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>
-                <p className="legend"><span onClick={() => this.displayRecipeBox(item.id)} >{item.title}</span></p>
+                <p className="legend"><button onClick={() => this.displayRecipeBox2(item.id)}><span onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></button></p>
                 <img src={item.image} className="recipeImg" alt="images" />
               </div>
             ))}
           </Carousel>
+          
           {
             this.state.showRecipe &&
             <div className="recipeStepsBox">
+               {
+              this.state.showIngredients &&
+              <div className="ingredientsAmount">
+                {this.state.ingre.map(indexer2 => 
+                  <div>
+                    {indexer2.original}
+                    <p><strong className="ingredTitle">{indexer2.metaInformation}</strong></p>
+
+                  </div>
+                    )}
+             
+              </div>
+              
+              }
               <h3>Step-by-Step Instructions</h3>
               {this.state.info.length ?
                 this.state.info.map(indexer => (
@@ -86,6 +121,7 @@ class RecipeList extends Component {
                   <h2>Sorry, recipe not available.</h2>
                   </div>
               }
+             
               <button id="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
             </div>
           }
