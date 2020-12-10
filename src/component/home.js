@@ -13,7 +13,6 @@ class Home extends Component {
 
     render() {
         return (
-
             this.state.showHome &&
             
             <div className="home" >

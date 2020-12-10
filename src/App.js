@@ -30,7 +30,6 @@ class App extends Component {
          this.setState({
           showHome: false,
            showIngredients: false,
-           showResult: false,
            showLoading: true
          })
        }

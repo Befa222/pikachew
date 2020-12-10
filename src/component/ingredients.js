@@ -42,6 +42,7 @@ class Ingredients extends Component {
         this.removeArrow()
         this.removeArrow()
         this.removeArrow()
+       
         this.searchBarGlass()
     }
     
