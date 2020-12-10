@@ -80,3 +80,7 @@
 .ingredTitle{
     font-family: 'Nerko One', cursive;
 }
+.ingredientsButton{
+    border : none;
+    background-color: beige;
+}
