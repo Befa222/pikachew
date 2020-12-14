@@ -48,10 +48,8 @@
     margin-bottom: 5px !important;
 }
 .recipeStepsBox {
-    background-color: bisque;
     background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5),
-                       rgba(0, 0, 0, 0.5)), url("https://cdna.artstation.com/p/assets/images/images/016/690/542/large/nathasha-padron-kitchen-details2.jpg?1553096258");
+    url('../images/scroll2.jpg');
     background-size: cover;
     background-position: contain;
     background-repeat: no-repeat;
@@ -59,26 +57,23 @@
     border-radius: 20px;
     position: fixed;
     z-index: 1;
-    top: 0%;
+    top: 0.5%;
     left: 0.5%;
     width: 98%;
-    height: 98%;
+    height: 95%;
     box-shadow: 50px 50px 280px 80px rgba(0,0,0,0.4);
     text-align: center;
     overflow-x: auto;
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
     padding-bottom: 1rem;
-    color: white;
-    -webkit-text-stroke: 1px white;
     padding-top: 15px;
 }
 .stepStyle {
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
     margin-top: 10px;
-    color: orange;
-    -webkit-text-stroke: 1px honeydew;
+   color: black;
 }
 #recipeButton {
     width: 9em;
@@ -86,12 +81,13 @@
     border-radius: 30px;
     font-size: 1.1rem;
     background-color: black;
+    color: white;
 }
 .ingredientsAmount{
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
-    color: orange;
-    -webkit-text-stroke: 1px honeydew;
+    color: black;
+   
 }
 .ingredientsAmount ul {
     margin-top: 0;
@@ -106,14 +102,6 @@
     list-style-type: none;
     margin-bottom: 10px;
 }
-.ingredTitle{
-    font-family: 'Nerko One', cursive;
-    margin-top: 1rem;
-    text-transform: capitalize;
-    color: red;
-    -webkit-text-stroke: 1px white;
-    font-size: 28px;
-}
 .ingredStepsList {
     margin-bottom: 0;
     padding-top: 0;
@@ -126,11 +114,13 @@
 }
 
 .stepInstruction{
-    color: red;
+    color: rgb(240, 60, 60);
 }
 
 .steps{
     color: black;
+    text-decoration: underline;
+    font-style: oblique;
 }
 .span1{
     font-family: 'Nerko One', cursive;

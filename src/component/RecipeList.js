@@ -102,7 +102,6 @@ class RecipeList extends Component {
                   <h3 className="steps">Ingredients</h3>
                   {this.state.ingre.map(indexer2 =>
                     <div className="ingredStepsList">
-                        <h3 className="ingredTitle">{indexer2.metaInformation}</h3>
                         <ul>
                         <li>{indexer2.original}</li>
                       </ul>
