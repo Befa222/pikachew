@@ -44,9 +44,9 @@
 figcaption{
     text-align: center;
 }
-p{
+.categoryCss{
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-    font-family:  'Press Start 2P', cursive;
 }
 .searchBar {
     width: 80%;

@@ -27,7 +27,7 @@ body{
 }
 .pikachu-home{
 	
-	margin-bottom:50px;
+	margin-bottom:13%;
 	width :60%;
 	height: auto;
 	align-self:center;
@@ -36,28 +36,40 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-.typerDiv {
+.typerDiv{
+	height: 25%;
 	background-image: url('../images/pokebubblebox.png');
-	background-color:  rgb(245, 215, 248);
-	align-self: center;
-	width: 220px;
-	height: 100px;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 0.4rem;
-	margin-top: 0;
-	padding: 8px 1rem;
+	background-repeat: no-repeat;
 	
 }
+/* .test{
+	width: 72%;
+	height :63%;
+	margin-top: 8%;
+	margin-left: 14.1%;
+	background-color: rgb(250, 176, 207);
+	border-radius: 5%;
+	
+} */
+.bubbleText{
+	border : 2px solid red;
+	font-family: 'Press Start 2P', cursive;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	
+}
+
 .home-button{
 	font-family: 'Press Start 2P', cursive;
-	margin-top: 70px;
 	width: 80%;
-	height: 50px;
+	height: 20%;
 	align-self:center;
 	font-family: 'Press Start 2P', cursive;
 	font-size: 15px;
 	background-color: rgb(200, 248, 247);
 	border-radius:10px;
+	bottom: 0;
 }
 
 /* Code for the mobile version goes in here, above this sentence. Do not write code below this line. */
@@ -91,7 +103,6 @@ body{
 		width: 55%;
 		height: 50px;
 		align-self:center;
-		font-family: 'Press Start 2P', cursive;
 		font-size: 15px;
 		margin-bottom: 5%;
 		

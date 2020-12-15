@@ -89,7 +89,7 @@ class Ingredients extends Component {
                     {
                         fridge.list.map(fridgeChoice => (
                             <>
-                                <p>{fridgeChoice.category}</p>
+                                <p className="categoryCss">{fridgeChoice.category}</p>
                                 <img className="ingredients-image" src={fridgeChoice.image} alt={fridgeChoice.category} />
                                 <div className="basic-multi-select">
                                     <SearchBar
