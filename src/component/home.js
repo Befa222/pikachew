@@ -23,12 +23,12 @@ class Home extends Component {
                   <img className="pikachu-home" alt="pikachu" src={pikachuHome}/>
                   <img className="homePikachuDesktop" alt="Chef Pikachu." src={chefpika}/>
                     <div className="typerDiv">
-                    <>
+                    <div className="test">
                     <PokeBubbleText 
                     stopCounter={221}
                     textData={["Pika-pi! Welcome to Pika-Chew!", "The quick-stop app for all your recipe needs!", "To get started, click on the button below!"]}
                     />
-                </>
+                </div>
                 </div>
                   <button className="home-button" onClick={this.props.toIngredients}><Sound/></button>
               </div>
