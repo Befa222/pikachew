@@ -103,7 +103,7 @@ class Ingredients extends Component {
                     }
                 </section>
                 <div className="container-home">
-                    <button className="home-button" onClick={this.props.toLoading}>
+                    <button className="ingredients-button" onClick={this.props.toLoading}>
                         <button className="cheat" onClick={this.getAllIngredients}>
                             <Sound2 />
                         </button>

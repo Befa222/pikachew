@@ -56,8 +56,8 @@ class PokeBubbleText extends Component {
 
   render() {
     return (
-      <div className="bubbleText">
-          <p>{this.state.text}</p>
+      <div>
+          <p className="bubbleText">{this.state.text}</p>
       </div>
     )
   }
