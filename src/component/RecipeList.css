@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width:280px) {
+@media only screen and (max-width: 768px) and (min-width:280px) {
 .carousel .thumbs-wrapper{
     display: none !important;
 }
@@ -22,6 +22,7 @@
 }
 .carousel.carousel-slider{
     border-top: 3px solid black;
+    border-bottom: 3px solid black;
     width: 100% !important;
     margin-top: 60px !important;
 }
@@ -37,9 +38,6 @@
     border-right: 8px solid black !important;
     display: none !important;
 }
-/* .carousel .control-dots .dot {
-    margin-bottom: 5px !important;
-} */
 .recipeStepsBox {
     background-image: url('../images/scroll-main.png');
     background-repeat: no-repeat;

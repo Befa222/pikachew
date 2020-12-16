@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width:280px) {
+@media only screen and (max-width: 768px) and (min-width:280px) {
 .ingredients{
     border-top:1px solid rgb(41, 177, 240);
     background-image: url("../images/ingredientsBackground.jpg");
@@ -125,4 +125,23 @@ figcaption{
         padding-top: 2%;
         font-size: 12px;
     }
+}
+ @media only screen and (max-width:768px) {
+    .ingredients-desktop{
+        display: none;
+                
+    }
+} 
+@media only screen and (min-width :769px) {
+    .categoryDesktop{
+        font-size: 30px;
+    }
+    .ingredients-header{
+        display: none;
+    }
+    .ingredients-section{
+        display:none;
+    }
+
+
 }

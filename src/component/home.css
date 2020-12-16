@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width:280px) {
+@media only screen and (max-width: 768px) and (min-width:280px) {
 	@font-face {
 		font-family: Pokemon Solid;
 		src: url('../fonts/Pokemon\ Solid.ttf')
@@ -21,9 +21,6 @@ body{
 	text-align: center;
 	color: rgb(240, 144, 184);
 	text-shadow: -7px -3px rgb(98, 98, 102), 3px 7px rgb(114, 105, 98);
-}
-.homePikachuDesktop {
-	display: none;
 }
 .pikachu-home{
 	
@@ -57,10 +54,10 @@ body{
 	padding: 3%;
 }
 .home-button{
-	align-self: center;
 	font-family: 'Press Start 2P', cursive;
-	width: 80%;
 	height: 50px;
+	width:80%;
+	margin-left: 10%;
 	bottom: 5%;
 	font-size: 14px;
 	background-color: rgb(200, 248, 247);
@@ -76,4 +73,92 @@ body{
 	.bubbleText{
 		font-size: 13px;
 	}
+}
+@media only screen and (min-width:600px) {
+	.homeTitle{
+		font-size: 85px;
+	}
+	.bubbleText{
+		height: 100px;
+		font-size: 140%;
+	}
+	.home-button{
+		height: 70px;
+		font-size: 25px;
+		margin-bottom: 8%;
+	}
+}
+
+				/* DESKTOP VERSION STARTS BELOW*/
+
+
+@media only screen and (min-width:769px) {
+	@font-face {
+		font-family: Pokemon Solid;
+		src: url('../fonts/Pokemon\ Solid.ttf')
+	}
+body{
+	background-color: rgb(248, 248, 196);
+}
+.home{
+	border:1px solid transparent;
+	background-image: url("../images/homeBackgroumd.gif");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+.homeTitle{
+	-webkit-text-stroke: 1px rgb(57, 225, 255);
+	font-family: Pokemon solid;
+	-webkit-text-stroke: 1px rgb(57, 225, 255);
+	font-size: 100px;
+	margin-top: 0;
+	text-align: center;
+	color: rgb(240, 144, 184);
+	text-shadow: -7px -3px rgb(98, 98, 102), 3px 7px rgb(114, 105, 98);
+}
+.pikachu-home{
+	border :solid 2px red;
+	margin-bottom:3%;
+	width :20%;
+	height: auto;
+	align-self:left;
+}
+.container-home{
+	display: flex;
+	flex-direction: row;
+}
+.typerDiv{
+	background-image: url('../images/pokebubblebox.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width:50%;
+	margin-left: 15%;
+	margin-bottom: 5%;
+	
+}
+.bubbleText{
+	border: 2px solid black;
+	background-color: rgb(255, 191, 218);
+	border-radius: 5px;
+	height: 17vh;;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 150%;
+	margin-top: 5%;
+	margin-left: 5.5%;
+	margin-right: 5.5%;
+	padding: 3%;
+}
+.home-button{
+	font-family: 'Press Start 2P', cursive;
+	margin-left: 10%;
+	width: 80%;
+	height: 50px;
+	font-size: 14px;
+	background-color: rgb(200, 248, 247);
+	padding-top: 1%;
+	padding-bottom: 1%;
+	border-radius: 10px;
+	margin-bottom: 1%;
+}
 }

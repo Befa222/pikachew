@@ -4,6 +4,7 @@ import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
 import { fridge } from './fridge'
+import {fridgeDesktop} from './fridgeDesktop'
 import { stock } from './stockIngredients'
 import Sound2 from './sound2'
 
@@ -12,6 +13,7 @@ let magGlassTarget, i;
 class Ingredients extends Component {
     state = {
         showIngredients: true,
+        ingredientsIngredients :[],
         ingredientsMeat: [],
         ingredientsFish: [],
         ingredientsVegetables: [],
@@ -54,6 +56,14 @@ class Ingredients extends Component {
             ['ingredients' + category]: optionToString
         })
     }
+    handleIngredientsChange2 = (option, category) => {
+        let optionToString = option
+            ? option.map(ingredientsOption => ingredientsOption.value)
+            : []
+        this.setState({
+            ['ingredients' + category]: optionToString
+        })
+    }
 
     getAllIngredients = () => {
         let allIngredients = [
@@ -70,6 +80,22 @@ class Ingredients extends Component {
             finalIngredients: stock.push(allIngredients)
         })
     }
+
+
+    getAllIngredients2= () => {
+        let allIngredients2 = [
+            ...this.state.ingredientsIngredients
+        ]
+        this.setState({
+            finalIngredients2: stock.push(allIngredients2)
+        })
+    }
+
+
+
+
+
+
 
 
     render() {
@@ -102,6 +128,35 @@ class Ingredients extends Component {
                         ))
                     }
                 </section>
+
+                
+                <section className="ingredients-desktop">
+                    {
+                        fridgeDesktop.list.map(fridgeChoice => (
+                            <>
+                                <p className="categoryDesktop">{fridgeChoice.category}</p>
+                                <img className="imageDesktop" src={fridgeChoice.image} alt={fridgeChoice.category} />
+                                <div className="basic-multi-select">
+                                    <SearchBar
+                                        list={fridgeChoice.ingredients}
+                                        handleIngredientsChange={this.handleIngredientsChange2}
+                                        category={fridgeChoice.category}
+                                    />
+                                </div>
+                            </>
+                        ))
+                    }
+                </section>
+
+
+
+
+
+
+
+
+
+
                 <div className="container-home">
                     <button className="ingredients-button" onClick={this.props.toLoading}>
                         <button className="cheat" onClick={this.getAllIngredients}>
