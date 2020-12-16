@@ -32,8 +32,9 @@
 .bubbleTextIngredients{
     width: 210px;
     font-family: 'Press Start 2P', cursive;
+    font-size: 90%;
     padding-left: 7%;
-    padding-top: 3%;
+    padding-top: 5%;
 
 }
 .ingredients-image{
@@ -117,4 +118,11 @@ figcaption{
     width : 99.9%;
     height: 45px;
 }
+}
+@media only screen and (max-width: 342px) {
+    .bubbleTextIngredients{
+        width: 150px;
+        padding-top: 2%;
+        font-size: 12px;
+    }
 }

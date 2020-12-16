@@ -15,8 +15,8 @@ class Result extends Component {
                     <img className="pikachu-results" src={pikachuIngredients} alt="pikachu" />
                     <div className="bubble-results">
                         <PokeBubbleText
-                        stopCounter={146}
-                        textData={["Pika-pi! And here we are...", "Swipe the pictures to choose a recipe and click on the name to display the method !"]}
+                        stopCounter={190}
+                        textData={["Pika-pi! And here we are...", "Swipe the pictures to choose a recipe !", "Tap on the name to display the method !"]}
                         />
                     </div>
                 </div>

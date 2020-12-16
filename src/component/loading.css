@@ -1,3 +1,4 @@
+@media only screen and (max-width: 600px) and (min-width:280px) {
 .loading{
     background-color: black;
     border-top:1px solid black;
@@ -7,15 +8,9 @@
     background-position: center;
     min-height: 100vh;
 }
-.title{
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
 .bubble-loading{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 15px;
+    font-size: 23px !important;
     color: white;
-    text-align: center;
+    
+}
 }

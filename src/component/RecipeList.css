@@ -1,34 +1,27 @@
-
+@media only screen and (max-width: 600px) and (min-width:280px) {
 .carousel .thumbs-wrapper{
     display: none !important;
 }
 .legend{
-
     font-family: 'Nerko One', cursive;
-    font-size: 22px !important;
     color: black !important;
     margin-bottom: 0;
     background-color: beige !important;
     border: 1px solid black;
-    padding: 2px !important;
 }
  .recipeContainer {
     background-color:#f8eed7;
 }
-/* .recipeImg {
-    object-fit: contain;
-    padding: 45px 28px 85px 28px;
-} */
 .carousel .carousel-status{
     display: none !important;
 }
 .carousel .slide .legend{
-    opacity: 0.7 !important;
+    opacity: 0.8 !important;
+    padding : 0% !important;
     
 }
 .carousel.carousel-slider{
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 3px solid black;
     width: 100% !important;
     margin-top: 60px !important;
 }
@@ -44,9 +37,9 @@
     border-right: 8px solid black !important;
     display: none !important;
 }
-.carousel .control-dots .dot {
+/* .carousel .control-dots .dot {
     margin-bottom: 5px !important;
-}
+} */
 .recipeStepsBox {
     background-image: url('../images/scroll-main.png');
     background-repeat: no-repeat;
@@ -136,5 +129,15 @@
 }
 .span1{
     font-family: 'Nerko One', cursive;
-    font-style: 30px;
+    font-size: 15px;
+}
+}
+@media only screen and (max-width: 336px) {
+    .span1{
+        font-size: 11px !important;
+    }
+    .carousel .control-dots .dot {
+       width : 4px !important;
+       height : 4px !important;
+    }
 }
