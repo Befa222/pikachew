@@ -1,3 +1,4 @@
+@media only screen and (max-width: 600px) and (min-width:280px) {
 .ingredients{
     border-top:1px solid rgb(41, 177, 240);
     background-image: url("../images/ingredientsBackground.jpg");
@@ -8,8 +9,9 @@
 }
 .pikachu-ingredients{
     width: 30%;
+    height: auto;
     background-color: beige;
-    border-radius: 100px;
+    border-radius: 100%;
     border : solid black;
 }
 .ingredients-header{
@@ -19,14 +21,20 @@
     margin-top:2%;
     margin-bottom: 20px;
 } 
+
 .bubble-ingredients{
-        background-image: url('../images/pokebubblebox.png');
-		width: 220px;
-		height: 100px;
-		font-family: 'Press Start 2P', cursive;
-		font-size: 0.4rem;
-		padding: 8px 1rem;
-		align-self: center;;
+    width : 65%;
+    background-image: url('../images/pokebubblebox.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.bubbleTextIngredients{
+    width: 210px;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 7%;
+    padding-top: 3%;
+
 }
 .ingredients-image{
     width: 30%;
@@ -108,4 +116,5 @@ figcaption{
     background-color:  rgb(200, 248, 247);
     width : 99.9%;
     height: 45px;
+}
 }

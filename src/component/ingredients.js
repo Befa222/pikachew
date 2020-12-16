@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PokeBubbleText from './PokebubbleText'
+import PokeBubbleText from './PokeBubbleTextIngredients'
 import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'

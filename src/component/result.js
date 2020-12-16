@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './result.css'
 import RecipeList from './RecipeList'
 import pikachuIngredients from '../images/pikachuIngredients.png'
-import PokeBubbleText from './PokebubbleText'
+import PokeBubbleText from './PokeBubbleTextIngredients'
 
 class Result extends Component {
 

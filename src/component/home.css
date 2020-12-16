@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width: 280px){
+@media only screen and (max-width: 600px) and (min-width:280px) {
 	@font-face {
 		font-family: Pokemon Solid;
 		src: url('../fonts/Pokemon\ Solid.ttf')
@@ -38,7 +38,6 @@ body{
 }
 .typerDiv{
 	background-image: url('../images/pokebubblebox.png');
-	
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	margin-left: 15%;
@@ -61,6 +60,7 @@ body{
 	align-self: center;
 	font-family: 'Press Start 2P', cursive;
 	width: 80%;
+	height: 50px;
 	bottom: 5%;
 	font-size: 14px;
 	background-color: rgb(200, 248, 247);
@@ -68,49 +68,12 @@ body{
 	padding-bottom: 3%;
 	border-radius: 10px;
 }
-
-/* Code for the mobile version goes in here, above this sentence. Do not write code below this line. */
 }
-@media only screen and (min-width: 600px){
-	.title{
-		font-family: Pokemon solid;
-		font-size: 55px;
-		text-align: center;
-		color: rgb(255, 203, 5);
-		text-shadow: -7px -3px 1px rgb(0, 58, 112), 3px 7px 1px rgb(61,125,202);
+@media only screen and (max-width: 338px) {
+	.homeTitle{
+		font-size : 45px;
 	}
-	.pikachu-home {
-		display:none;
-	}
-	.container-home{
-		display: flex;
-		flex-direction: column;
-	}
-	.homePikachuDesktop {
-		display:flex;
-		align-self: center;
-		width:30%;
-	}
-	.poke-bubble{
-		display:none;
-	}
-	.home-button{
-		font-family: 'Press Start 2P', cursive;
-		margin-top: 70px;
-		width: 55%;
-		height: 50px;
-		align-self:center;
-		font-size: 15px;
-		margin-bottom: 5%;
-		
-	}
-	.typerDiv {
-		background-image: url('../images/pokebubblebox.png');
-		width: 220px;
-		height: 100px;
-		font-family: 'Press Start 2P', cursive;
-		font-size: 0.4rem;
-		padding: 8px 1rem;
-		align-self: center;
+	.bubbleText{
+		font-size: 13px;
 	}
 }

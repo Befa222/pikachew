@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./home.css"
-import PokeBubbleText from './PokebubbleText'
+import PokeBubbleText from './PokebubbleTextHome'
 import chefpika from '../images/chefpikachu.png'
 import pikachuHome from '../images/pikachuHome.gif'
 import Sound from './sound'

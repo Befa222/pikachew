@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Result from './result'
-import PokeBubbleText from './PokebubbleText'
+import PokeBubbleText from './PokeBubbleTextIngredients'
 import './loading.css'
 
 class Loading extends Component {
