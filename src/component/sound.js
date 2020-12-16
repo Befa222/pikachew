@@ -9,7 +9,7 @@ function Sound() {
     const [play] = useSound(Pika)
     return (
         <div>
-            <span className="home-button" onClick={play}>Let's start!</span>
+            <span onClick={play}>Let's start!</span>
         </div>
     )
 }

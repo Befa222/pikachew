@@ -3,6 +3,9 @@ import { stock } from './stockIngredients';
 import './RecipeList.css';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import scrollTop from '../images/scroll-top.png'
+import scrollBottom from '../images/scroll-bottom.png'
+
 
 /* let getRecipeInstructions = url => fetch(url).then(result => result.json()) */
 
@@ -95,14 +98,15 @@ class RecipeList extends Component {
 
           {
             this.state.showRecipe &&
+            
             <div className="recipeStepsBox">
+              <img className="scrollTop" src={scrollTop} alt="scroll"/>
               {
                 this.state.showIngredients &&
                 <div className="ingredientsAmount">
                   <h3 className="steps">Ingredients</h3>
                   {this.state.ingre.map(indexer2 =>
                     <div className="ingredStepsList">
-                        <h3 className="ingredTitle">{indexer2.metaInformation}</h3>
                         <ul>
                         <li>{indexer2.original}</li>
                       </ul>
@@ -125,6 +129,7 @@ class RecipeList extends Component {
                 </div>
               }
               <button id="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
+              <img className="scrollBottom" src={scrollBottom} alt="scroll"/>
             </div>
           }
 

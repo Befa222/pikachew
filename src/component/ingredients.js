@@ -89,7 +89,7 @@ class Ingredients extends Component {
                     {
                         fridge.list.map(fridgeChoice => (
                             <>
-                                <p>{fridgeChoice.category}</p>
+                                <p className="categoryCss">{fridgeChoice.category}</p>
                                 <img className="ingredients-image" src={fridgeChoice.image} alt={fridgeChoice.category} />
                                 <div className="basic-multi-select">
                                     <SearchBar
@@ -103,7 +103,7 @@ class Ingredients extends Component {
                     }
                 </section>
                 <div className="container-home">
-                    <button className="home-button" onClick={this.props.toLoading}>
+                    <button className="ingredients-button" onClick={this.props.toLoading}>
                         <button className="cheat" onClick={this.getAllIngredients}>
                             <Sound2 />
                         </button>
