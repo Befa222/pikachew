@@ -9,7 +9,7 @@
 .pikachu-ingredients{
     width: 30%;
     background-color: beige;
-    border-radius: 100%;
+    border-radius: 100px;
     border : solid black;
 }
 .ingredients-header{
