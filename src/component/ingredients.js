@@ -6,6 +6,7 @@ import SearchBar from './searchBar'
 import { fridge } from './fridge'
 import {fridgeDesktop} from './fridgeDesktop'
 import { stock } from './stockIngredients'
+import {stockDesktop} from './stockIngredientsDesktop'
 import Sound2 from './sound2'
 
 let magGlassTarget, i;
@@ -22,7 +23,8 @@ class Ingredients extends Component {
         ingredientsGrains: [],
         ingredientsHerbs: [],
         ingredientsSauces: [],
-        finalIngredients: []
+        finalIngredients: [],
+        finalIngredients2: []
     }
 
     removeArrow = () => document.querySelector(".css-6q0nyr-Svg").remove()
@@ -56,14 +58,14 @@ class Ingredients extends Component {
             ['ingredients' + category]: optionToString
         })
     }
-    handleIngredientsChange2 = (option, category) => {
-        let optionToString = option
-            ? option.map(ingredientsOption => ingredientsOption.value)
-            : []
-        this.setState({
-            ['ingredients' + category]: optionToString
-        })
-    }
+    // handleIngredientsChange2 = (option, category) => {
+    //     let optionToString = option
+    //         ? option.map(ingredientsOption => ingredientsOption.value)
+    //         : []
+    //     this.setState({
+    //         ['ingredients' + category]: optionToString
+    //     })
+    // }
 
     getAllIngredients = () => {
         let allIngredients = [
@@ -87,7 +89,7 @@ class Ingredients extends Component {
             ...this.state.ingredientsIngredients
         ]
         this.setState({
-            finalIngredients2: stock.push(allIngredients2)
+            finalIngredients2: stockDesktop.push(allIngredients2)
         })
     }
 
@@ -132,27 +134,28 @@ class Ingredients extends Component {
                 
                 <section className="ingredients-desktop">
                     {
-                        fridgeDesktop.list.map(fridgeChoice => (
+                        fridgeDesktop.list.map(fridgeChoice2 => (
                             <>
-                                <p className="categoryDesktop">{fridgeChoice.category}</p>
-                                <img className="imageDesktop" src={fridgeChoice.image} alt={fridgeChoice.category} />
+                                <p className="categoryDesktop">{fridgeChoice2.category}</p>
+                                <img className="imageDesktop" src={fridgeChoice2.image} alt={fridgeChoice2.category} />
                                 <div className="basic-multi-select">
                                     <SearchBar
-                                        list={fridgeChoice.ingredients}
-                                        handleIngredientsChange={this.handleIngredientsChange2}
-                                        category={fridgeChoice.category}
+                                        list={fridgeChoice2.ingredients}
+                                        handleIngredientsChange={this.handleIngredientsChange}
+                                        category={fridgeChoice2.category}
                                     />
                                 </div>
                             </>
                         ))
                     }
+                    <div className="container-home">
+                    <button className="ingredients-button2" onClick={this.props.toLoading}>
+                        <button className="cheat2" onClick={this.getAllIngredients2}>
+                            <Sound2 />
+                        </button>
+                    </button>
+                    </div>
                 </section>
-
-
-
-
-
-
 
 
 

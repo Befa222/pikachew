@@ -142,6 +142,11 @@ figcaption{
     .ingredients-section{
         display:none;
     }
-
+    .ingredients-button{
+        display: none;
+    }
+    .cheat{
+        display: none;
+    }
 
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { stock } from './stockIngredients';
+import {stockDesktop} from './stockIngredientsDesktop'
 import './RecipeList.css';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -66,8 +67,9 @@ class RecipeList extends Component {
   /*https://api.spoonacular.com/recipes/complexSearch?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc*/
 
   componentDidMount() {
+    
     let stock2 = stock.join()
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=14`)
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=2`)
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -75,7 +77,17 @@ class RecipeList extends Component {
           items: json
         })
       })
+      let stock3= stockDesktop.join()     /*desktop version*/
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock3}&number=2`)
+       .then(res => res.json())
+      .then(json => {
+         this.setState({
+          isLoaded: true,
+          items: json
+        })
+      })
   }
+
 
   render() {
     let { isLoaded, items } = this.state;
