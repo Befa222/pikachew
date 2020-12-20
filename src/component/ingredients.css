@@ -192,18 +192,18 @@ figcaption{
         position: absolute;
         bottom: 0;
         left: 35%;
-        height: 6vh;
+        height: 7vh;
         margin-bottom: 3%;
-        border-radius: 50px;
+        border-radius: 10px;
         border: 2px solid black;
-        background-image: linear-gradient(rgb(240, 119, 6), rgb(187, 164, 150));
+        background-image: linear-gradient(rgb(255, 69, 0), rgb(243, 161, 119));
     }
     .cheat2{
         width : 99.9%;
-        height: 3vh;
+        height: 6vh;
         border: none;
         font-family: 'Press Start 2P', cursive;
-        font-size: 15px;
+        font-size: 18px;
         background: transparent;
     }
     .bubbleTextDesktop{

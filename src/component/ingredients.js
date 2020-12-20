@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PokeBubbleText from './PokeBubbleTextIngredients'
+import PokeBubbleTextDesktop from './PokeBubbleDesktop'
 import "./ingredients.css"
 import pikachuIngredients from '../images/pikachuIngredients.png'
 import SearchBar from './searchBar'
@@ -100,7 +101,7 @@ class Ingredients extends Component {
                     <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu" />
                     <div className="bubble-ingredients">
                         <PokeBubbleText
-                            stopCounter={120}
+                            stopCounter={140}
                             textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
@@ -138,9 +139,9 @@ class Ingredients extends Component {
                                     />
                                 </div>
                                 <div className="bubbleTextDesktop">
-                                    <PokeBubbleText
-                                    stopCounter={110}
-                                    textData={["Chaaarr! It's time to raid your fridge!", "Type the ingredients in the search bar and click the button below !"]}/>
+                                    <PokeBubbleTextDesktop
+                                    stopCounter={152}
+                                    textData={["Chaarr! It's time to raid your fridge!", "Type the ingredients in the search bar and click the button below !"]}/>
                                 </div>
                             </>
                         ))
