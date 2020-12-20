@@ -58,15 +58,7 @@ class Ingredients extends Component {
             ['ingredients' + category]: optionToString
         })
     }
-    // handleIngredientsChange2 = (option, category) => {
-    //     let optionToString = option
-    //         ? option.map(ingredientsOption => ingredientsOption.value)
-    //         : []
-    //     this.setState({
-    //         ['ingredients' + category]: optionToString
-    //     })
-    // }
-
+    
     getAllIngredients = () => {
         let allIngredients = [
             ...this.state.ingredientsMeat,
@@ -108,7 +100,7 @@ class Ingredients extends Component {
                     <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu" />
                     <div className="bubble-ingredients">
                         <PokeBubbleText
-                            stopCounter={140}
+                            stopCounter={120}
                             textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
                         />
                     </div>
@@ -131,24 +123,29 @@ class Ingredients extends Component {
                     }
                 </section>
 
+                            {/* desktop version starts here */}
                 
                 <section className="ingredients-desktop">
                     {
                         fridgeDesktop.list.map(fridgeChoice2 => (
                             <>
                                 <p className="categoryDesktop">{fridgeChoice2.category}</p>
-                                <img className="imageDesktop" src={fridgeChoice2.image} alt={fridgeChoice2.category} />
-                                <div className="basic-multi-select">
+                                <div className="basic-multi-select2">
                                     <SearchBar
                                         list={fridgeChoice2.ingredients}
                                         handleIngredientsChange={this.handleIngredientsChange}
                                         category={fridgeChoice2.category}
                                     />
                                 </div>
+                                <div className="bubbleTextDesktop">
+                                    <PokeBubbleText
+                                    stopCounter={110}
+                                    textData={["Chaaarr! It's time to raid your fridge!", "Type the ingredients in the search bar and click the button below !"]}/>
+                                </div>
                             </>
                         ))
                     }
-                    <div className="container-home">
+                    <div className="container-homeDesktop">
                     <button className="ingredients-button2" onClick={this.props.toLoading}>
                         <button className="cheat2" onClick={this.getAllIngredients2}>
                             <Sound2 />
@@ -157,6 +154,11 @@ class Ingredients extends Component {
                     </div>
                 </section>
 
+
+
+
+                
+                                {/* desktop version stops here */}
 
 
 

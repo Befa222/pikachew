@@ -17,6 +17,7 @@ class Home extends Component {
             <div className="home" >
                 <div>
                   <h1 className="homeTitle">Pick a Chew</h1>
+                  <h2 className="subTitleDesktop">Charmander Desktop Version</h2>
                 </div>
                 <div className="container-home">
                   <img className="pikachu-home" alt="pikachu" src={pikachuHome}/>

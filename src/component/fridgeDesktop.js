@@ -1,11 +1,10 @@
-import meat from '../images/meatIcon.png'
+
 
 
 export let fridgeDesktop = {
     list: [
         {
           category: 'Ingredients',
-          image: meat,
           ingredients:
      
          [
