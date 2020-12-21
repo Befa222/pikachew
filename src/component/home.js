@@ -3,6 +3,8 @@ import "./home.css"
 import PokeBubbleText from './PokebubbleTextHome'
 import pikachuHome from '../images/pikachuHome.gif'
 import Sound from './sound'
+import home from './videos/home2.mp4'
+
 
 class Home extends Component {
 
@@ -14,7 +16,20 @@ class Home extends Component {
         return (
             this.state.showHome &&
             
-            <div className="home" >
+            <div className="home">
+                <div>
+               <video autoPlay muted loop
+                    style={{
+                    position : "absolute",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    zIndex: "-1"
+                  }}>
+                    <source src={home} type='video/mp4' />
+                  </video>
+                  </div>
+
                 <div>
                   <h1 className="homeTitle">Pick a Chew</h1>
                   <h2 className="subTitleDesktop">Charmander Desktop Version</h2>

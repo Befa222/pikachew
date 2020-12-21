@@ -13,10 +13,11 @@
     color: white;
     
 }
-.loadingDesktop{
-    display:none !important;
+.videoDesktop{
+    display:none;
+    
+    
 }
-
 }
 
 
@@ -24,9 +25,9 @@
 
 
 @media only screen and (min-width:769px) and (max-width:1920px) {
-    /* .loading{
+    .loading{
         display:none;
-    } */
+    }
     .bubble-loading{
         display: none;
     }

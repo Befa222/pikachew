@@ -24,6 +24,8 @@ class Loading extends Component {
       this.hidingTimer()
     }
 
+  
+
     render() {
       if (this.state.showLoading) {
         
@@ -31,6 +33,7 @@ class Loading extends Component {
           
             this.state.showLoading &&
 
+            <>
               <div className="loading">
                 <div className="bubble-loading">
                   <PokeBubbleText
@@ -38,11 +41,12 @@ class Loading extends Component {
                   textData={["Now loading..."]}
                   />
                 </div>
+                </div>
 
                     {/* Desktop version */}
                     
-                <div  classname="loadingDesktop" >
-                  <video autoPlay
+                 <div className="videoDesktop">
+                  <video autoPlay muted
                     style={{
                     position : "absolute",
                     width: "100%",
@@ -55,7 +59,7 @@ class Loading extends Component {
                 </div>
 
           
-              </div>
+              </>
         )
       }
       else {
