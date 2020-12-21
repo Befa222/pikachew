@@ -4,7 +4,7 @@ import PokeBubbleText from './PokebubbleTextHome'
 import pikachuHome from '../images/pikachuHome.gif'
 import Sound from './sound'
 import home from './videos/home2.mp4'
-
+import Sound3 from './soundDesktop'
 
 class Home extends Component {
 
@@ -29,7 +29,6 @@ class Home extends Component {
                     <source src={home} type='video/mp4' />
                   </video>
                   </div>
-
                 <div>
                   <h1 className="homeTitle">Pick a Chew</h1>
                   <h2 className="subTitleDesktop">Charmander Desktop Version</h2>
@@ -44,6 +43,7 @@ class Home extends Component {
                 </div>
                 </div>
                   <button className="home-button" onClick={this.props.toIngredients}><Sound /></button>
+                  <button className="home-buttonDesktop" onClick={this.props.toIngredients}><Sound3 /></button>
             
           </div>
         )

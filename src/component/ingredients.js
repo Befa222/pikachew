@@ -10,6 +10,7 @@ import { stock } from './stockIngredients'
 import {stockDesktop} from './stockIngredientsDesktop'
 import Sound2 from './sound2'
 
+
 let magGlassTarget, i;
 
 class Ingredients extends Component {

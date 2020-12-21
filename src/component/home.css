@@ -71,6 +71,9 @@ body{
 video{
 	display: none;
 }
+.home-buttonDesktop{
+	display:none;
+}
 }
 @media only screen and (max-width: 338px) {
 	.homeTitle{
@@ -143,9 +146,12 @@ body{
 	display: none;
 } 
 .home-button{
+	display:none;
+}
+.home-buttonDesktop{
 	font-family: 'Press Start 2P', cursive;
-	margin-left: 10%;
-	width: 80%;
+	margin-left: 25%;
+	width: 50%;
 	height: 50px;
 	font-size: 20px;
 	background-image: linear-gradient(rgb(245, 131, 24), rgb(156, 63, 9));

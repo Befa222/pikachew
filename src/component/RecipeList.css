@@ -139,3 +139,90 @@
        height : 4px !important;
     }
 }
+
+            /* desktop version starts here */
+
+
+@media only screen and (min-width: 769px) and (max-width:1920px) {
+    .carousel.carousel-slider{
+        border: 3px solid black;
+        position: absolute;
+        left: 35%;
+        top:20vh;
+        width: 30% !important;
+        margin-top: 0 !important;
+    }
+    .carousel .carousel-status{
+        display: none !important;
+    }
+    .carousel .thumbs-wrapper{
+        display: none !important;
+    }
+    .legend{
+        font-family: 'Nerko One', cursive;
+        color: black !important;
+        margin-bottom: 0;
+        background-color: beige !important;
+        border: 1px solid black;
+    }
+    .carousel .slide .legend{
+        opacity: 0.8 !important;
+        padding : 0% !important;
+        
+    }
+    .ingredientsButton{
+        border : none;
+        width: 80%;
+        background-color:beige ;
+        font-size: 17px;
+    }
+    .scrollTop{
+        width:65%;
+        position: fixed;
+        top:0;
+        left:17.5%;
+        z-index: 1;
+    }
+    .scrollBottom{
+        width:65%;
+        position: fixed;
+        bottom:0;
+        left:17.5%;
+        z-index: 1;
+    }
+    .steps{
+        margin-top: 5%;
+        color: black;
+        text-decoration: underline;
+        font-style: oblique;
+    }
+    .carousel .control-next.control-arrow:before {
+        border-left: 20px solid orangered !important;
+    }
+    .carousel .control-prev.control-arrow:before {
+        border-right: 20px solid orangered !important;
+    }
+    .recipeStepsBox {
+        background-image: url('../images/scroll-main.png');
+        background-repeat: no-repeat;
+        background-size: 65% 75%;
+        background-position: center;
+        border-radius: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 0.1%;
+        left: 0.5%;
+        width: 99%;
+        height: 95%;
+        box-shadow: 50px 50px 280px 80px rgba(0,0,0,0.4);
+        text-align: center;
+        overflow-x: auto;
+        font-family: 'Nerko One', cursive;
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+        padding-top: 15px;
+    }
+    .ingredientsAmount ul li{
+        list-style-type: none;
+    }
+}
