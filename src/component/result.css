@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width:280px) {
+@media only screen and (max-width: 768px) and (min-width:280px) {
 .results{
     border-top:1px solid rgb(160, 41, 240);
     background-image:url('https://images.hdqwalls.com/download/anime-sunset-scene-b8-640x1136.jpg') ;
@@ -37,4 +37,33 @@
 	background-color: rgb(200, 248, 247);
 	border-radius:10px;
 }
+}
+
+        /* desktop version starts here*/
+
+@media only screen and (min-width: 769px) and (max-width:1920px) {
+    .pikachu-results{
+        display:none;
+    }
+    .bubble-results{
+        display: none;
+    }
+    .results{
+        background-image: url('../images/resultsDesktop.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+    }
+    .result-button{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 14px;
+        position: absolute;
+        left: 35.3%;
+        bottom:10%;
+        width:30%;
+        height: 8vh;
+        border-radius: 10px;
+        border: 2px solid black;
+        background-image: linear-gradient(rgb(255, 69, 0), rgb(243, 161, 119));
+    }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { stock } from './stockIngredients';
+import {stockDesktop} from './stockIngredientsDesktop'
 import './RecipeList.css';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -66,6 +67,7 @@ class RecipeList extends Component {
   /*https://api.spoonacular.com/recipes/complexSearch?apiKey=71b0a410e528408b9c88a08d281b4d6f&query=Beef&number=3&sortDirection=desc*/
 
   componentDidMount() {
+    
     let stock2 = stock.join()
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock2}&number=14`)
       .then(res => res.json())
@@ -75,7 +77,17 @@ class RecipeList extends Component {
           items: json
         })
       })
+      let stock3= stockDesktop.join()     /*desktop version*/
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_SPOONACULAR_KEY}&ingredients=${stock3}&number=14`)
+       .then(res => res.json())
+      .then(json => {
+         this.setState({
+          isLoaded: true,
+          items: json
+        })
+      })
   }
+
 
   render() {
     let { isLoaded, items } = this.state;
@@ -86,12 +98,13 @@ class RecipeList extends Component {
       return (
 
         <div className="recipeListContainer">
+          <p className="resultTitleDesktop">Recipes</p>
           <Carousel >
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>
                 <img src={item.image} className="recipeImg" alt="images" />
                 <p className="legend"><button className="ingredientsButton" onClick={() => this.displayRecipeBox2(item.id)}>
-                  <span className="span1" onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></button></p>
+                <span className="span1" onClick={() => this.displayRecipeBox(item.id)}>{item.title}</span></button></p>
               </div>
             ))}
           </Carousel>
@@ -109,7 +122,7 @@ class RecipeList extends Component {
                     <div className="ingredStepsList">
                         <ul>
                         <li>{indexer2.original}</li>
-                      </ul>
+                        </ul>
                     </div>
                   )}
                 </div>
@@ -119,16 +132,15 @@ class RecipeList extends Component {
               {this.state.info.length ?
                 this.state.info.map(indexer => (
                   <div>
-                  <h3 className="stepInstruction">  Step {indexer.number} </h3>
+                    <h3 className="stepInstruction">  Step {indexer.number} </h3>
                     <p className="stepStyle">{indexer.step}</p>
-                    
                   </div>
                 ))
                 : <div>
-                  <h2>Sorry, recipe not available.</h2>
-                </div>
+                    <h2>Sorry, recipe not available.</h2>
+                  </div>
               }
-              <button id="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
+              <button className="recipeButton" onClick={this.closeRecipeBox}>Back to Recipes</button>
               <img className="scrollBottom" src={scrollBottom} alt="scroll"/>
             </div>
           }

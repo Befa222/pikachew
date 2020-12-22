@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Result from './result'
 import PokeBubbleText from './PokeBubbleTextIngredients'
 import './loading.css'
+import char from './videos/loadingScreen.mp4'
 
 class Loading extends Component {
 
@@ -16,12 +17,14 @@ class Loading extends Component {
     hidingTimer() {
       this.timerId = setTimeout(() => {
         this.setState({ showLoading: false })
-      }, 2000)
+      }, 3000)
     }
 
     componentDidMount() {
       this.hidingTimer()
     }
+
+  
 
     render() {
       if (this.state.showLoading) {
@@ -30,6 +33,7 @@ class Loading extends Component {
           
             this.state.showLoading &&
 
+            <>
               <div className="loading">
                 <div className="bubble-loading">
                   <PokeBubbleText
@@ -37,7 +41,25 @@ class Loading extends Component {
                   textData={["Now loading..."]}
                   />
                 </div>
-              </div>
+                </div>
+
+                    {/* Desktop version */}
+                    
+                 <div className="videoDesktop">
+                  <video autoPlay muted
+                    style={{
+                    position : "absolute",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    zIndex: "-1"
+                  }}>
+                    <source src={char} type='video/mp4' />
+                  </video>
+                </div>
+
+          
+              </>
         )
       }
       else {

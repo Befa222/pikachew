@@ -13,12 +13,12 @@ class Result extends Component {
             <div className="results">
                 <div className="results-header">
                     <img className="pikachu-results" src={pikachuIngredients} alt="pikachu" />
-                    <div className="bubble-results">
-                        <PokeBubbleText
-                        stopCounter={190}
-                        textData={["Pika-pi! And here we are...", "Swipe the pictures to choose a recipe !", "Tap on the name to display the method !"]}
-                        />
-                    </div>
+                        <div className="bubble-results">
+                            <PokeBubbleText
+                            stopCounter={190}
+                            textData={["Pika-pi! And here we are...", "Swipe the pictures to choose a recipe !", "Tap on the name to display the method !"]}
+                            />
+                        </div>
                 </div>
                 <>
                 <RecipeList

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) and (min-width:280px) {
+@media only screen and (max-width: 768px) and (min-width:280px) {
 .carousel .thumbs-wrapper{
     display: none !important;
 }
@@ -22,6 +22,7 @@
 }
 .carousel.carousel-slider{
     border-top: 3px solid black;
+    border-bottom: 3px solid black;
     width: 100% !important;
     margin-top: 60px !important;
 }
@@ -37,9 +38,6 @@
     border-right: 8px solid black !important;
     display: none !important;
 }
-/* .carousel .control-dots .dot {
-    margin-bottom: 5px !important;
-} */
 .recipeStepsBox {
     background-image: url('../images/scroll-main.png');
     background-repeat: no-repeat;
@@ -79,7 +77,7 @@
     margin-top: 10px;
    color: black;
 }
-#recipeButton {
+.recipeButton {
     width: 9em;
     height: 2.5em;
     border-radius: 30px;
@@ -131,6 +129,9 @@
     font-family: 'Nerko One', cursive;
     font-size: 15px;
 }
+.resultTitleDesktop{
+    display: none;
+}
 }
 @media only screen and (max-width: 336px) {
     .span1{
@@ -141,3 +142,126 @@
        height : 4px !important;
     }
 }
+
+            /* desktop version starts here */
+
+
+@media only screen and (min-width: 769px) and (max-width:1920px) {
+
+    .resultTitleDesktop{
+        margin-top: 0;
+        position: absolute;
+        top:0;
+        left: 43%;
+        color: orangered;
+        font-family: Pokemon solid;
+        text-shadow: 6px 6px 7px black, -6px -6px 8px black;
+        -webkit-text-stroke: 3px rgb(83, 75, 69);
+        font-size: 50px;
+        z-index: 1;
+    }
+    .carousel.carousel-slider{
+        border: 3px solid black;
+        position: absolute;
+        left: 35%;
+        top:22vh;
+        width: 30% !important;
+        margin-top: 0 !important;
+    }
+    .carousel .carousel-status{
+        display: none !important;
+    }
+    .thumbs-wrapper{
+       display: none;
+    
+    }
+    .legend{
+        font-family: 'Nerko One', cursive;
+        color: black !important;
+        margin-bottom: 0;
+        background-color: beige !important;
+        border: 1px solid black;
+    }
+    .carousel .slide .legend{
+        opacity: 0.8 !important;
+        padding : 0% !important;
+        
+    }
+    .ingredientsButton{
+        border : none;
+        width: 80%;
+        background-color:beige ;
+        font-size: 17px;
+    }
+    .scrollTop{
+        width:65%;
+        position: fixed;
+        top:0;
+        left:17.5%;
+        z-index: 1;
+    }
+    .scrollBottom{
+        width:65%;
+        position: fixed;
+        bottom:0;
+        left:17.5%;
+        z-index: 1;
+    }
+    .steps{
+        margin-top: 5%;
+        color: black;
+        text-decoration: underline;
+        font-style: oblique;
+    }
+    .carousel .control-next.control-arrow:before {
+       display: none !important;
+    }
+    .carousel .control-prev.control-arrow:before {
+        display: none !important;
+    }
+    .recipeStepsBox {
+        background-image: url('../images/scroll-main.png');
+        background-repeat: no-repeat;
+        background-size: 65% 100%;
+        background-position: center;
+        border-radius: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 2%;
+        width: 99%;
+        height: 82%; 
+        text-align: center;
+        overflow-x: auto;
+        font-family: 'Nerko One', cursive;
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+        padding-top: 15px;
+        
+    }
+    .ingredientsAmount ul li{
+        list-style-type: none;
+        margin-left: 18%;
+        margin-right: 20%;
+    }
+    .stepStyle{
+        margin-left: 22%;
+        margin-right: 21%;
+    }
+    .stepInstruction{
+        color: rgb(240, 60, 60);
+    }
+    .recipeButton {
+        width: 9em;
+        height: 2.5em;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        background-color: black;
+        color: white;
+        margin-bottom: 3%;
+    }
+    .span1{
+        font-family: 'Nerko One', cursive;
+        font-size: 15px;
+    }
+}
+
