@@ -98,6 +98,7 @@ class RecipeList extends Component {
       return (
 
         <div className="recipeListContainer">
+          <p className="resultTitleDesktop">Recipes</p>
           <Carousel >
             {items.map(item => (
               <div className="recipeContainer" data-id={item.id}>

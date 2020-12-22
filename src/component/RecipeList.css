@@ -129,6 +129,9 @@
     font-family: 'Nerko One', cursive;
     font-size: 15px;
 }
+.resultTitleDesktop{
+    display: none;
+}
 }
 @media only screen and (max-width: 336px) {
     .span1{
@@ -144,11 +147,24 @@
 
 
 @media only screen and (min-width: 769px) and (max-width:1920px) {
+
+    .resultTitleDesktop{
+        margin-top: 0;
+        position: absolute;
+        top:0;
+        left: 43%;
+        color: orangered;
+        font-family: Pokemon solid;
+        text-shadow: 6px 6px 7px black, -6px -6px 8px black;
+        -webkit-text-stroke: 3px rgb(83, 75, 69);
+        font-size: 50px;
+        z-index: 1;
+    }
     .carousel.carousel-slider{
         border: 3px solid black;
         position: absolute;
         left: 35%;
-        top:20vh;
+        top:22vh;
         width: 30% !important;
         margin-top: 0 !important;
     }
@@ -197,7 +213,7 @@
         text-decoration: underline;
         font-style: oblique;
     }
-     .carousel .control-next.control-arrow:before {
+    .carousel .control-next.control-arrow:before {
        display: none !important;
     }
     .carousel .control-prev.control-arrow:before {
