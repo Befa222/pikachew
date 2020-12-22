@@ -78,6 +78,8 @@ class Ingredients extends Component {
     }
 
 
+            // Desktop version below
+
     getAllIngredients2= () => {
         let allIngredients2 = [
             ...this.state.ingredientsIngredients
@@ -87,28 +89,22 @@ class Ingredients extends Component {
         })
     }
 
-
-
-
-
-
-
-
     render() {
         return (
             this.state.showIngredients &&
-            <div className="ingredients">
-                <div className="ingredients-header">
-                    <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu" />
-                    <div className="bubble-ingredients">
-                        <PokeBubbleText
-                            stopCounter={140}
-                            textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
-                        />
+
+                <div className="ingredients">
+                    <div className="ingredients-header">
+                        <img className="pikachu-ingredients" src={pikachuIngredients} alt="pikachu" />
+                            <div className="bubble-ingredients">
+                                <PokeBubbleText
+                                stopCounter={140}
+                                textData={["Pika-pi! It's time to raid your fridge!", "Select the ingredients in the categories below!"]}
+                                />
+                            </div>
                     </div>
-                </div>
-                <section className="ingredients-section">
-                    {
+                    <section className="ingredients-section">
+                        {
                         fridge.list.map(fridgeChoice => (
                             <>
                                 <p className="categoryCss">{fridgeChoice.category}</p>
@@ -121,54 +117,55 @@ class Ingredients extends Component {
                                     />
                                 </div>
                             </>
-                        ))
-                    }
-                </section>
+                            ))
+                        }
+                    </section>
 
-                            {/* desktop version starts here */}
+                            {/* Desktop version starts here */}
                 
-                <section className="ingredients-desktop">
-                    {
-                        fridgeDesktop.list.map(fridgeChoice2 => (
+                    <section className="ingredients-desktop">
+                        {
+                            fridgeDesktop.list.map(fridgeChoice2 => (
                             <>
                                 <p className="categoryDesktop">{fridgeChoice2.category}</p>
                                 <div className="basic-multi-select2">
                                     <SearchBar
-                                        list={fridgeChoice2.ingredients}
-                                        handleIngredientsChange={this.handleIngredientsChange}
-                                        category={fridgeChoice2.category}
+                                    list={fridgeChoice2.ingredients}
+                                    handleIngredientsChange={this.handleIngredientsChange}
+                                    category={fridgeChoice2.category}
                                     />
                                 </div>
                                 <div className="bubbleTextDesktop">
                                     <PokeBubbleTextDesktop
                                     stopCounter={152}
-                                    textData={["Chaarr! It's time to raid your fridge!", "Type the ingredients in the search bar and click the button below !"]}/>
+                                    textData={["Chaarr! It's time to raid your fridge!", "Type the ingredients in the search bar and click the button below !"]}
+                                    />
                                 </div>
                             </>
-                        ))
-                    }
-                    <div className="container-homeDesktop">
-                    <button className="ingredients-button2" onClick={this.props.toLoading}>
-                        <button className="cheat2" onClick={this.getAllIngredients2}><Sound2 /></button>
-                    </button>
-                    </div>
-                </section>
+                            ))
+                        }
+                        <div className="container-homeDesktop">
+                            <button className="ingredients-button2" onClick={this.props.toLoading}>
+                            <button className="cheat2" onClick={this.getAllIngredients2}><Sound2 /></button>
+                            </button>
+                        </div>
+                    </section>
 
-                                {/* desktop version stops here */}
+                                {/* Desktop version stops here */}
 
 
 
-                <div className="container-home">
-                    <button className="ingredients-button" onClick={this.props.toLoading}>
-                        <button className="cheat" onClick={this.getAllIngredients}>
+                        <div className="container-home">
+                            <button className="ingredients-button" onClick={this.props.toLoading}>
+                            <button className="cheat" onClick={this.getAllIngredients}>
                             <Sound2 />
-                        </button>
-                    </button>
+                            </button>
+                            </button>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
-}
 
 
 export default Ingredients;

@@ -109,13 +109,6 @@ video{
 body{
 	background-color: rgb(248, 248, 196);
 }
-/* .home{
-	border:1px solid transparent;
-	background-image: url("../images/charmanderHome.jpg");
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-} */
 .homeTitle{
 	-webkit-text-stroke: 1px rgb(158, 64, 10);
 	font-family: Pokemon solid;
