@@ -150,9 +150,7 @@
 
     .resultTitleDesktop{
         margin-top: 0;
-        position: absolute;
-        top:0;
-        left: 43%;
+        text-align: center;
         color: orangered;
         font-family: Pokemon solid;
         text-shadow: 6px 6px 7px black, -6px -6px 8px black;
@@ -164,7 +162,7 @@
         border: 3px solid black;
         position: absolute;
         left: 35%;
-        top:22vh;
+        top: -50px;
         width: 30% !important;
         margin-top: 0 !important;
     }
