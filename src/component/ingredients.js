@@ -147,7 +147,7 @@ class Ingredients extends Component {
                         }
                         <div className="container-homeDesktop">
                             <button className="ingredients-button2" onClick={this.props.toLoading}>
-                            <button className="cheat2" onClick={this.getAllIngredients2}><Sound2 /></button>
+                            <span className="cheat2" onClick={this.getAllIngredients2}><Sound2 /></span>
                             </button>
                         </div>
                     </section>
@@ -158,9 +158,9 @@ class Ingredients extends Component {
 
                         <div className="container-home">
                             <button className="ingredients-button" onClick={this.props.toLoading}>
-                            <button className="cheat" onClick={this.getAllIngredients}>
+                            <span className="cheat" onClick={this.getAllIngredients}>
                             <Sound2 />
-                            </button>
+                            </span>
                             </button>
                     </div>
                 </div>
