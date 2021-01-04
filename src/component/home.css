@@ -74,6 +74,9 @@ video{
 .home-buttonDesktop{
 	display:none;
 }
+.pokedex{
+	display: none;
+}
 }
 @media only screen and (max-width: 338px) {
 	.homeTitle{
@@ -155,6 +158,11 @@ body{
 	margin-bottom: 1%;
 	position: absolute;
 	bottom:0;
+}
+.pokedex{
+	position: absolute;
+	top : 33%;
+	left: 10%;
 }
 
 }

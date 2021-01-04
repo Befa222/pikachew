@@ -44,6 +44,9 @@ class Home extends Component {
                 </div>
                   <button className="home-button" onClick={this.props.toIngredients}><Sound /></button>
 
+
+                  <button className="pokedex" onClick={this.props.toPokedex}>pokedex</button>
+
                   <button className="home-buttonDesktop" onClick={this.props.toIngredients}><Sound3 /></button>   {/*button for desktop version */}
             </div>
         )

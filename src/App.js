@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import Home from './component/home'
 import Ingredients from './component/ingredients'
 import Loading from './component/loading'
+import Pokedex from './component/Pokedex'
+
 
 class App extends Component {
     state={
         showHome : true,
         showIngredients: false,
-        showLoading : false
+        showLoading : false,
+        showPokedex: false
     }
 
       showHomeSection = () => {
@@ -34,6 +37,15 @@ class App extends Component {
          })
        }
 
+       showPokedexSection = () => {
+        this.setState({
+         showHome: false,
+          showIngredients: false,
+          showLoading: false,
+          showPokedex: true
+        })
+      }
+
       render() {
         return (
          <div>
@@ -42,6 +54,7 @@ class App extends Component {
           <div className="home">
             <Home
             toIngredients={this.showIngredientsSection}
+            toPokedex={this.showPokedexSection}
             />
           </div>
         }
@@ -61,6 +74,18 @@ class App extends Component {
               />
             </div>
         } 
+
+        {
+          this.state.showPokedex &&
+            <div className="Pokedex">
+              <Pokedex
+              toHome={this.showHomeSection}
+              />
+            </div>
+        } 
+
+
+
       </div>
     );
   }
