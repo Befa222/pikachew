@@ -6,7 +6,6 @@ import {toFirstCharUppercase} from "./Constants";
 import axios from "axios";
 import './pokedex.css'
 
-
 const useStyles = makeStyles((theme) => ({
     pokedexContainer: {
       paddingTop: "20px",
@@ -37,11 +36,12 @@ const useStyles = makeStyles((theme) => ({
       margin: "5px",
     },
   }));
+
   const Pokedex = (props) => {
     const classes = useStyles();
-    const { history } = props;
     const [pokemonData, setPokemonData] = useState({});
     const [filter, setFilter] = useState("");
+    const [pokemon, setPokemon] = useState(undefined);
     useEffect(() => {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon?limit=895`)
@@ -61,31 +61,50 @@ const useStyles = makeStyles((theme) => ({
           setPokemonData(newPokemonData);
         });
     }, []);
+
+    const findPokemon = (id) => {
+      axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then(function (response) {
+        const { data } = response;
+        setPokemon(data);
+      })
+      .catch(function (error) {
+        setPokemon(false);
+      });
+    }
     const handleSearchChange = (e) => {
       setFilter(e.target.value);
     };
     const getPokemonCard = (pokemonId) => {
       const { id, name, sprite } = pokemonData[pokemonId];
       return (
+        
         <Grid item xs={4} key={pokemonId}>
-          <Card onClick={() => history.push(`/${id}`)}>
+          
+          <Card onClick={() => findPokemon(id)}>
             <CardMedia
               className={classes.cardMedia}
               image={sprite}
-              style={{ width: "130px", height: "130px" }}
+              style={{ width: "130px", height: "130px" }} 
             />
             <CardContent className={classes.cardContent}>
               <Typography>{`${id}. ${toFirstCharUppercase(name)}`}</Typography>
             </CardContent>
+            {/* {pokemon && 
+          <div>
+          <p>Height: {pokemon.height}</p>
+          <p>Weight: {pokemon.weight}</p>
+        </div>
+          } */}
           </Card>
         </Grid>
       );
     };
     return (
       <>
-      
         <AppBar position="static">
-        <button className="backHomeButton">back to home page</button>
+        <button onClick={props.toHome} className="backHomeButton">BACK TO HOME</button>
           <Toolbar>
             <div className={classes.searchContainer}>
               <SearchIcon className={classes.searchIcon} />

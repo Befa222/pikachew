@@ -17,7 +17,8 @@ class App extends Component {
         this.setState({
           showHome: true,
           showIngredients: false,
-          showLoading : false
+          showLoading : false,
+          showPokedex : false
         })
       }
 
@@ -25,7 +26,8 @@ class App extends Component {
         this.setState({
           showHome: false,
           showIngredients: true,
-          showLoading : false
+          showLoading : false,
+          showPokedex : false
         })
       }
     
@@ -33,7 +35,8 @@ class App extends Component {
          this.setState({
           showHome: false,
            showIngredients: false,
-           showLoading: true
+           showLoading: true,
+           showPokedex : false
          })
        }
 

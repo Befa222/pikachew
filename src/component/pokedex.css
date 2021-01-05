@@ -3,3 +3,8 @@ body{
     height: 100%;
     margin: 0;
 }
+.backHomeButton{
+    background-color: #87ceeb;
+    border: none;
+    color: white;
+}

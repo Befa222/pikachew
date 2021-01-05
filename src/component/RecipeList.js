@@ -11,6 +11,7 @@ import scrollBottom from '../images/scroll-bottom.png'
 /* let getRecipeInstructions = url => fetch(url).then(result => result.json()) */
 
 class RecipeList extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {

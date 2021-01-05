@@ -31,7 +31,7 @@ class Home extends Component {
                 </div>              {/* video for desktop version stops here */}
                 <div>
                   <h1 className="homeTitle">Pick a Chew</h1>
-                  <h2 className="subTitleDesktop">Charmander Desktop Version</h2>
+                 <span onClick={this.props.toPokedex}><h2 className="subTitleDesktop">Charmander Desktop Version</h2></span>
                 </div>
                 <div className="container-home">
                   <img className="pikachu-home" alt="pikachu" src={pikachuHome}/>
@@ -43,9 +43,6 @@ class Home extends Component {
                     </div>
                 </div>
                   <button className="home-button" onClick={this.props.toIngredients}><Sound /></button>
-
-
-                  <button className="pokedex" onClick={this.props.toPokedex}>pokedex</button>
 
                   <button className="home-buttonDesktop" onClick={this.props.toIngredients}><Sound3 /></button>   {/*button for desktop version */}
             </div>
