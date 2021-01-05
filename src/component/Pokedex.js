@@ -91,12 +91,12 @@ const useStyles = makeStyles((theme) => ({
             <CardContent className={classes.cardContent}>
               <Typography>{`${id}. ${toFirstCharUppercase(name)}`}</Typography>
             </CardContent>
-            {/* {pokemon && 
+            {pokemon && 
           <div>
-          <p>Height: {pokemon.height}</p>
-          <p>Weight: {pokemon.weight}</p>
+          {/* <p>Height: {pokemon.height}</p>
+          <p>Weight: {pokemon.weight}</p> */}
         </div>
-          } */}
+          }
           </Card>
         </Grid>
       );
