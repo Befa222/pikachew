@@ -79,6 +79,12 @@ export let fridge = {
         },
         {
           value: 'Octopus', label: 'Octopus'
+        },
+        {
+          value: 'Lobster', label: 'Lobster'
+        },
+        {
+          value: 'Snails', label: 'Snails'
         }
       ]
     },
@@ -378,6 +384,9 @@ export let fridge = {
         },
         {
           value: 'Thousand Island Dressing', label:'Thousand Island Dressing'
+        },
+        {
+          value: 'Sriracha', label: 'Sriracha'
         }
       ]
     }
