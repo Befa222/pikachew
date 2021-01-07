@@ -73,6 +73,12 @@ export let fridge = {
         },
         {
           value: 'Sardine', label: 'Sardine'
+        },
+        {
+          value: 'Crab', label: 'Crab'
+        },
+        {
+          value: 'Octopus', label: 'Octopus'
         }
       ]
     },
@@ -325,6 +331,12 @@ export let fridge = {
         {
           value: 'Paprika', label: 'Paprika'
         },
+        {
+          value: 'Black Pepper', label: 'Black Pepper'
+        },
+        {
+          value: 'White Pepper', label: 'White Pepper'
+        }
       ]
     },
     {
